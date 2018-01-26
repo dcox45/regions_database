@@ -1,0 +1,15 @@
+<br>
+<h1 class = "maintheme">Edit region: <%= @region.name.capitalize %></h1>
+<br>
+<br>
+<form class="" action="/update_region/<%=@region.name%>" method="post">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" value="<%= @region.name%>">
+  <label for="image_url">Image URL</label>
+  <input type="text" id = "image_url" name="image_url" value="<%= @region.image_url%>">
+  <label for="begDate">Beginning Date of Trip</label>
+  <input type="date" id = "begDate" name="begDate" value="<% @region.begDate%>">
+  <label for="endDate">End Date of Trip</label>
+  <input type="date" id = "endDate" name="endDate" value="<%@region.endDate%>">
+  <input type="submit">
+</form>

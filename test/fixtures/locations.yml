@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caption: MyString
+  region_id: MyString
+  image_url: MyString
+  date: 2018-01-26
+  city_or_CMA: MyString
+
+two:
+  caption: MyString
+  region_id: MyString
+  image_url: MyString
+  date: 2018-01-26
+  city_or_CMA: MyString

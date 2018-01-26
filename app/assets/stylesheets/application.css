@@ -1,3 +1,45 @@
+/*CRUCIAL style*/
+.mainthick {
+  font-weight: bold;
+}
+
+.writings {
+  font-size: 20px;
+  line-height:1.2
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.background_a {
+  background-color: FloralWhite;
+}
+
+
+/*FOR HOME PAGE */
+
+.maintheme {
+  color: darkgreen;
+  text-align: center;
+}
+
+.industrial {
+  color: brown;
+  text-align: center;
+
+}
+
+.region_name {
+
+}
+
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
