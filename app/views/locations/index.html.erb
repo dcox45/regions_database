@@ -1,3 +1,16 @@
 <% @locations.each do |location| %>
-  <h3><%=location.caption %></h3>
+  <% if location.region_id.downcase == @region.name.downcase %>
+    <h3 class = "industrial"><%=location.caption %></h3>
+    <br>
+    <br>
+    <br>
+    <img class = "photo" src="<%=location.image_url%>" alt="<%=location.caption%>" width = 500 >
+    <br>
+    <p align = "center" class = "mainthick"><%= location.date %></p>
+    <br>
+    <br>
+    <a href="/<%=location.caption%>/edit">Edit</a>
+    <a href="/destroy_location/<%= location.caption.downcase %>">Destroy</a>
+    <%end%>
+
 <%end%>

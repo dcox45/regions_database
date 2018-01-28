@@ -2,7 +2,7 @@
 <h1 class = "maintheme">Edit region: <%= @region.name.capitalize %></h1>
 <br>
 <br>
-<form class="" action="/update_region/<%=@region.name%>" method="post">
+<form class="" action="/update_region/<%=@region.name%>">
   <label for="name">Name</label>
   <input type="text" id="name" name="name" value="<%= @region.name%>">
   <label for="image_url">Image URL</label>

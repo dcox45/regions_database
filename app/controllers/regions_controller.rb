@@ -6,7 +6,6 @@ class RegionsController < ApplicationController
 
   def show
     @region = Region.find_by(name: params['name'])
-    # @locations = Location.find_by(region_name:  params['name'])
   end
 
   def new
@@ -29,7 +28,7 @@ class RegionsController < ApplicationController
   end
 
   def update
-    region = Region.find(params['name'])
+    region = Region.find_by(name: params['name'])
     region.name = params['name']
     region.image_url = params['image_url']
     region.begDate = params['begDate']
