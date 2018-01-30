@@ -7,7 +7,8 @@ class LocationsController < ApplicationController
   end
 
   def show
-    @location = Location.find_by(name: params['caption'])
+    @region = Region.find_by(name: params['name'])
+    @location = Location.find_by(caption: params['caption'])
   end
 
   def new

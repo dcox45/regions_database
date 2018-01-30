@@ -14,13 +14,15 @@ Rails.application.routes.draw do
   #LOCATIONS
   get('/regions/:name/locations', {:controller => 'locations', :action => 'index'})
 
+  get('/regions/:name/:caption', {:controller => 'locations', :action => 'show'})
+
   get('/new_location', {:controller => 'locations', :action => 'new'})
 
   get('/create_location', {:controller => 'locations', :action => 'create'})
 
-  get('/location/:caption/edit', {:controller => 'locations', :action => 'edit'})
+  get('/:name/:caption/edit', {:controller => 'locations', :action => 'edit'})
 
-  get('/location/update_location/:caption', {:controller => 'locations', :action => 'update'})
+  get('/update_location/:caption', {:controller => 'locations', :action => 'update'})
 
   get('/destroy_location/:caption', {:controller => 'locations', :action => 'destroy'})
 

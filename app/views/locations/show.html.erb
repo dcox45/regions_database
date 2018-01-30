@@ -1,8 +1,12 @@
-<h1>Region: <%= @location.capiton.capitalize %></h1>
-<img src="<%=@location.image_url %>" alt="<%=@location.name %>" width = 500>
+<h1 class = "industrial">Location: <%= @location.caption.titleize %></h1>
+<img class = "photo" src="<%=@location.image_url %>" alt="<%=@location.caption %>" width = 500>
 <br>
 <p class = "mainthick"><%= @location.date %></p>
 <br>
+<br>
+<h4 class = "maintheme">
+  <button type="button" class= class="btn btn-primary btn-lg">
+    <a href="/regions/<%= @region.name %>/locations">Back to All Locations Visited in <%= @region.name.capitalize%></a>
+  </button>
+</h4>
 <!-- BUTTONS -->
-<a href="/<%=@location.caption%>/edit">Edit</a>
-<a href="/destroy_location/<%= @location.caption.downcase %>">Destroy</a>

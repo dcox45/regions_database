@@ -1,9 +1,10 @@
 <br>
 <h1 class = "industrial">Edit Location:
-      </p><%= @location.caption.titleize %></p></h1>
+      <p><%= @location.caption.titleize %> </p>
+</h1>
 <br>
 <br>
-<form class="" action="/location/update_location/<%=@location.caption%>" method="post">
+<form class="" action="/update_location/<%=@location.caption%>">
   <label for="caption">Caption</label>
   <input type="text" id="caption" name="caption" value="<%= @location.caption%>">
   <label for="region_id">Region</label>
