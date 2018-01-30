@@ -31,7 +31,7 @@ class LocationsController < ApplicationController
   end
 
   def update
-    location = Location.find_by(params['caption'])
+    location = Location.find_by(caption: params['caption'])
     location.caption = params['caption']
     location.region_id = params['region_id']
     location.image_url = params['image_url']

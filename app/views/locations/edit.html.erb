@@ -1,17 +1,18 @@
 <br>
-<h1 class = "maintheme">Edit location: <%= @location.caption.capitalize %></h1>
+<h1 class = "industrial">Edit Location:
+      </p><%= @location.caption.titleize %></p></h1>
 <br>
 <br>
-<form class="" action="/update_location/<%=@location.caption%>" method="post">
+<form class="" action="/location/update_location/<%=@location.caption%>" method="post">
   <label for="caption">Caption</label>
   <input type="text" id="caption" name="caption" value="<%= @location.caption%>">
   <label for="region_id">Region</label>
   <input type="text" id="region_id" name="region_id" value="<%= @location.region_id%>">
   <label for="image_url">Image URL</label>
   <input type="text" id = "image_url" name="image_url" value="<%= @location.image_url%>">
-  <label for="date">Beginning Date of Trip</label>
+  <label for="date">Date Visited</label>
   <input type="date" id = "date" name="date" value="<% @location.date%>">
   <label for="city_or_CMA">Nearest City or CMA</label>
-  <input type="date" id = "city_or_CMA" name="city_or_CMA" value="<%@location.city_or_CMA%>">
+  <input type="text" id = "city_or_CMA" name="city_or_CMA" value="<%@location.city_or_CMA%>">
   <input type="submit">
 </form>

@@ -13,11 +13,21 @@ Rails.application.routes.draw do
 
   #LOCATIONS
   get('/regions/:name/locations', {:controller => 'locations', :action => 'index'})
+
   get('/new_location', {:controller => 'locations', :action => 'new'})
+
   get('/create_location', {:controller => 'locations', :action => 'create'})
-  get('/:location/edit', {:controller => 'locations', :action => 'edit'})
-  get('/:caption/update_location', {:controller => 'locations', :action => 'update'})
+
+  get('/location/:caption/edit', {:controller => 'locations', :action => 'edit'})
+
+  get('/location/update_location/:caption', {:controller => 'locations', :action => 'update'})
+
   get('/destroy_location/:caption', {:controller => 'locations', :action => 'destroy'})
 
 
 end
+
+#PROBLEMS / SOLUTIONS LOG
+
+# problem: edit locations ('/:caption/edit') did not work and would call up the regions controller
+#   solution: :name and :caption were being interpreted as the same - changed URL to '/location/:caption/edit'
