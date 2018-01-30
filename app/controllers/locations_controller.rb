@@ -27,11 +27,15 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    @region = Region.find_by(name: params['name'])
     @location = Location.find_by(caption: params['caption'])
     render('edit.html.erb')
   end
 
   def update
+
+    region = Region.find_by(name: params['name'])
+
     location = Location.find_by(caption: params['caption'])
     location.caption = params['caption']
     location.region_id = params['region_id']
@@ -39,7 +43,7 @@ class LocationsController < ApplicationController
     location.date = params['begDate']
     location.city_or_CMA = params['city_or_CMA']
     location.save
-    redirect_to("/regions/:name/#{location.caption}")
+    redirect_to("/regions/#{region.name}/locations")
   end
 
   def destroy

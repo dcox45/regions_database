@@ -9,7 +9,7 @@
     <p align = "center" class = "mainthick"><%= location.date %></p>
     <br>
     <br>
-    <a href="/location/<%=location.caption%>/edit">Edit</a>
+    <a href="/<%=@region.name%>/<%=location.caption%>/edit">Edit</a>
     <a href="/destroy_location/<%= location.caption.downcase %>">Destroy</a>
     <%end%>
 
