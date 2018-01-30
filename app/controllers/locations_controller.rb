@@ -40,10 +40,10 @@ class LocationsController < ApplicationController
     location.caption = params['caption']
     location.region_id = params['region_id']
     location.image_url = params['image_url']
-    location.date = params['begDate']
+    location.date = params['date']
     location.city_or_CMA = params['city_or_CMA']
     location.save
-    redirect_to("/regions/#{region.name}/locations")
+    redirect_to("/regions/#{region.name}/#{location.caption.downcase}")
   end
 
   def destroy

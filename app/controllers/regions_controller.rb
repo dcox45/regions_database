@@ -1,8 +1,13 @@
 class RegionsController < ApplicationController
+
+#HOME
+
   def home
     @regions = Region.all
-    render('home.html.erb')
+    render('!home.html.erb')
   end
+
+#REGIONS
 
   def show
     @region = Region.find_by(name: params['name'])
@@ -35,6 +40,12 @@ class RegionsController < ApplicationController
     region.endDate = params['endDate']
     region.save
     redirect_to("/regions/#{region.name}")
+  end
+
+  def index_locations
+    @region = Region.find_by(name: params['name'])
+    @locations = Location.all
+    render('index_locations.html.erb')
   end
 
   def destroy

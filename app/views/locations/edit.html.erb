@@ -12,8 +12,8 @@
   <label for="image_url">Image URL</label>
   <input type="text" id = "image_url" name="image_url" value="<%= @location.image_url%>">
   <label for="date">Date Visited</label>
-  <input type="date" id = "date" name="date" value="<% @location.date%>">
+  <input type="date" id = "date" name="date" value="<%=@location.date%>">
   <label for="city_or_CMA">Nearest City or CMA</label>
-  <input type="text" id = "city_or_CMA" name="city_or_CMA" value="<%@location.city_or_CMA%>">
+  <input type="text" id = "city_or_CMA" name="city_or_CMA" value="<%=@location.city_or_CMA%>">
   <input type="submit">
 </form>

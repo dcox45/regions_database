@@ -1,13 +1,4 @@
 /*CRUCIAL style*/
-.mainthick {
-  font-weight: bold;
-  color: brown
-}
-
-.writings {
-  font-size: 20px;
-  line-height:1.2
-}
 
 .column {
     float: left;
@@ -49,6 +40,7 @@
     margin-right: auto
 }
 
+/*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 
 
 
