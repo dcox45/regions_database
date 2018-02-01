@@ -9,8 +9,10 @@ class RegionsController < ApplicationController
 
 #REGIONS
 
-  def show
+  def index_locations
     @region = Region.find_by(name: params['name'])
+    @locations = Location.all
+    render('index_locations.html.erb')
   end
 
   def new
@@ -39,13 +41,12 @@ class RegionsController < ApplicationController
     region.begDate = params['begDate']
     region.endDate = params['endDate']
     region.save
-    redirect_to("/regions/#{region.name}")
+    redirect_to("/regions")
   end
 
-  def index_locations
+  def warning
     @region = Region.find_by(name: params['name'])
-    @locations = Location.all
-    render('index_locations.html.erb')
+    render("warning.html.erb")
   end
 
   def destroy
@@ -53,16 +54,5 @@ class RegionsController < ApplicationController
     region.destroy
     redirect_to("/regions")
   end
-
-
-
-
-  # region#show
-  # region stuf..
-  #
-  # <% @locations.each do |location|%>
-  #   <h2>location.name</h2>
-  #   image
-  # <%end%>
 
 end

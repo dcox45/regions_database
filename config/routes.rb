@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   #HOME PAGE
   get('/regions', {:controller => 'regions', :action => 'home'})
 
+  #WARNINGS
+  get('/destroy_warning/:name', {:controller => 'regions', :action => 'warning'})
+
   #REGIONS CRUD
   get('/regions/:name', {:controller => 'regions', :action => 'index_locations'})
   get('/new_region', {:controller => 'regions', :action => 'new'})
@@ -10,6 +13,7 @@ Rails.application.routes.draw do
   get('/:name/edit', {:controller => 'regions', :action => 'edit'})
   get('/update_region/:name', {:controller => 'regions', :action => 'update'})
   get('/destroy_region/:name', {:controller => 'regions', :action => 'destroy'})
+
 
   #LOCATIONS CRUD
   get('/regions/:name/:caption', {:controller => 'locations', :action => 'show'})

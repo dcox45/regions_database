@@ -19,9 +19,9 @@
           <h4><%= link_to region.name.capitalize, "/regions/#{region.name}" %> </h4>
           <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 300>
           <p class = "mainthick"><%= region.begDate %> - <%= region.endDate %></p>
-          <a href="/<%=region.name%>/edit" class = "btn btn-primary">View</a>
+          <a href="regions/<%=region.name%>" class = "btn btn-primary">View</a>
           <a href="/<%=region.name%>/edit" class = "btn btn-warning">Edit</a>
-          <a href="/destroy_region/<%=region.name.downcase %>" class = "btn btn-danger">Destroy</a>
+          <a href="/destroy_warning/<%=region.name%>" class = "btn btn-danger">Destroy</a>
           <br>
           <br>
           <br>
