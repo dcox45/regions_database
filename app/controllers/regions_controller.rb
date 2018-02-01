@@ -9,10 +9,10 @@ class RegionsController < ApplicationController
 
 #REGIONS
 
-  def index_locations
+  def show
     @region = Region.find_by(name: params['name'])
     @locations = Location.all
-    render('index_locations.html.erb')
+    render('show.html.erb')
   end
 
   def new

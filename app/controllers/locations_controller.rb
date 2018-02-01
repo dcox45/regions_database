@@ -43,7 +43,7 @@ class LocationsController < ApplicationController
     location.date = params['date']
     location.city_or_CMA = params['city_or_CMA']
     location.save
-    redirect_to("/regions/#{region.name}/#{location.caption.downcase}")
+    redirect_to("/regions/#{region.name}/#{location.caption}")
   end
 
   def destroy
