@@ -36,7 +36,6 @@ class LocationsController < ApplicationController
   end
 
   def update
-
     region = Region.find_by(name: params['name'])
 
     location = Location.find(params['id'])
@@ -46,13 +45,20 @@ class LocationsController < ApplicationController
     location.date = params['date']
     location.city_or_CMA = params['city_or_CMA']
     location.save
-    redirect_to("/regions/#{region.name}/#{location.id}")
+    redirect_to("/regions/#{region.name}")
+  end
+
+  def warning
+    @region = Region.find_by(name: params['name'])
+    @location = Location.find(params['id'])
+    render('warning.html.erb')
   end
 
   def destroy
+    @region = Region.find_by(name: params['name'])
     location = Location.find(params['id'])
     location.destroy
-    redirect_to("/regions/:name")
+    redirect_to("/regions/#{@region.name}")
   end
 
 end

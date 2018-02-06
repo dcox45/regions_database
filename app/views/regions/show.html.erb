@@ -21,7 +21,7 @@
           <p align = "center">
             <a href="/regions/<%=@region.name%>/<%=location.id%>" class = "btn btn-primary">View</a>
             <a href="/<%=@region.name%>/<%=location.id%>/edit" class = "btn btn-warning">Edit</a>
-            <a href="/destroy_location/<%= location.id %>" class = "btn btn-danger">Destroy</a>
+            <a href="/<%=@region.name%>/destroy_warning/<%=location.id%>" class = "btn btn-danger">Destroy</a>
           </p>
           <br>
             <br>
