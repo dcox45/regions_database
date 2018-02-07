@@ -12,6 +12,7 @@ class LocationsController < ApplicationController
   end
 
   def new
+    @regions = Region.all
     @region = Region.find_by(name: params['name'])
     render('new.html.erb')
   end

@@ -40,6 +40,12 @@
     margin-right: auto
 }
 
+.navbar-custom {
+    font-weight: bold;
+    background-color: darkgreen;
+}
+
+
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 
 

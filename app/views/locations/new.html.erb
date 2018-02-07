@@ -3,15 +3,31 @@
 <br>
 <br>
 <form class="" action="/<%= @region.name %>/create_location" >
-  <label for="name">Caption</label>
+  <label for="name">Caption: </label>
   <input type="text" id="caption" name="caption" value="">
-    <label for="name">Region</label>
-    <input type="text" id="region_id" name="region_id" value="">
-  <label for="image_url">Image URL</label>
+
+  <label for="region_id">Region: </label>
+  <select name ="region_id" >
+    <option></option>
+    <% @regions.each do |r| %>
+
+      <option type = "text" id ="region_id" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
+
+    <% end %>
+
+  </select>
+
+
+  <label for="image_url">Image URL: </label>
   <input type="text" id = "image_url" name="image_url" value="">
-  <label for="date">Date Visited</label>
+  <label for="date">Date Visited: </label>
   <input type="date" id = "date" name="date" value="">
-  <label for="endDate">Nearest City or CMA</label>
+  <label for="endDate">Nearest City or CMA: </label>
   <input type="text" id = "city_or_CMA" name="city_or_CMA" value="">
   <input type="submit">
 </form>
+
+
+
+<!-- <label for="name">Region</label>
+<input type="text" id="region_id" name="region_id" value=""> -->
