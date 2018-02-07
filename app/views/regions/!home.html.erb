@@ -17,7 +17,7 @@
 
         <% @regions.each do |region| %>
           <h4><%= link_to region.name.capitalize, "/regions/#{region.name}" %> </h4>
-          <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 300>
+          <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350>
           <p class = "mainthick"><%= region.begDate %> - <%= region.endDate %></p>
           <a href="regions/<%=region.name%>" class = "btn btn-primary">View</a>
           <a href="/<%=region.name%>/edit" class = "btn btn-warning">Edit</a>
@@ -31,7 +31,7 @@
       <a href="/new_region" class = "btn btn-success">+ Add a Region</a>
       <br>
       <br>
-      <p class = "writings">In recalling all of the places i've been to, memories inevitably spring back, in rich detail that I want to more fully describe...</p>
+      <p class = "writings">In recalling all of the places i've been to, I also feel the need to write down my more detailed memories associated with them.</p>
       <p class = "writings">At some point, this database will be accompanied by my writing, and be formed into something of a blog.  But for now, this will have to do.</p>
 
     </div>
