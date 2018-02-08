@@ -8,7 +8,7 @@
 
   <label for="region_id">Region: </label>
   <select name ="region_id">
-    <option value="" disabled selected><%= @region.name.capitalize %></option>
+    <option></option>
     <% @regions.each do |r| %>
       <option type = "text" id ="region_id" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
     <% end %>
@@ -20,8 +20,8 @@
   <input type="text" id = "image_url" name="image_url" value="">
   <label for="date">Date Visited: </label>
   <input type="date" id = "date" name="date" value="">
-  <label for="city_or_CMA">Nearest City or CMA: </label>
-  <input type="text" id = "city_or_CMA" name="city_or_CMA" value="">
+  <label for="nearest_area">Nearest Area (Neighborhood, Town, City):</label>
+  <input type="text" id = "nearest_area" name="nearest_area" value="">
   <input type="submit">
 </form>
 
@@ -29,3 +29,5 @@
 
 <!-- <label for="name">Region</label>
 <input type="text" id="region_id" name="region_id" value=""> -->
+
+<!-- disabled selected><%= @region.name.capitalize %> -->

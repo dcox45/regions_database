@@ -1,24 +1,30 @@
-# README
+<!-- #PROBLEMS / SOLUTIONS LOG
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# problem: edit locations ('/:id/edit') did not work and would call up the regions controller
+#   solution: :name and :id were being interpreted as the same - changed URL to '/location/:id/edit'
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+#RESTRUCURING CREATE
+#get('/new_region', {:controller => 'regions', :action => 'new'})
+#get('/new_location', {:controller => 'locations', :action => 'new'})
 
-* Configuration
+  # controller
+    # render new
+  # view
+    #new: submits to /:name/create_region
+    #empty placeholder for region_id dropdown
 
-* Database creation
 
-* Database initialization
+#get('/create_region', {:controller => 'regions', :action => 'create'})
+#get('/:name/create_location', {:controller => 'locations', :action => 'create'})
 
-* How to run the test suite
+  # locations controller
+    #  region = params['region_name']
 
-* Services (job queues, cache servers, search engines, etc.)
+    #  create......
+    #redirect_to("/regions/#{region.name}/#{location.id}")
 
-* Deployment instructions
-
-* ...
+  # Locations view
+    #back button
+      # submit to /regions/:name -->

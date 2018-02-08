@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180126203409) do
+ActiveRecord::Schema.define(version: 20180208162602) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "caption"
     t.string   "region_id"
     t.string   "image_url"
     t.date     "date"
-    t.string   "city_or_CMA"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "nearest_area"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "regions", force: :cascade do |t|
