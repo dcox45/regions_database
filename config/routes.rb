@@ -23,6 +23,33 @@ Rails.application.routes.draw do
   get('/destroy_warning/:name', {:controller => 'regions', :action => 'warning'})
   get('/:name/destroy_warning/:id', {:controller => 'locations', :action => 'warning'})
 
+  #RESTRUCURING CREATE
+  #get('/new_region', {:controller => 'regions', :action => 'new'})
+  #get('/new_location', {:controller => 'locations', :action => 'new'})
+
+    # controller
+      # render new
+    # view
+      #new: submits to /:name/create_region
+      #empty placeholder for region_id dropdown
+
+
+  #get('/create_region', {:controller => 'regions', :action => 'create'})
+  #get('/:name/create_location', {:controller => 'locations', :action => 'create'})
+
+    # locations controller
+      #  region = params['region_name']
+
+      #  create......
+      #redirect_to("/regions/#{region.name}/#{location.id}")
+
+    # Locations view
+      #back button
+        # submit to /regions/:name
+
+
+
+
 
 end
 

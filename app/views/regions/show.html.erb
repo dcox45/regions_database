@@ -16,10 +16,10 @@
         <div class="column">
 
           <h3 class = "industrial"><%=location.caption %></h3>
-          <br>
+          <p align = "center"><%= location.city_or_CMA %></p></p>
           <img class = "photo" src="<%=location.image_url%>" alt="<%=location.caption%>" width = 350 >
           <br>
-          <p align = "center" class = "mainthick"><%= location.date %></p>
+          <p align = "center" class = "mainthick"><%= location.date %> </p>
           <br>
           <p align = "center">
             <a href="/regions/<%=@region.name%>/<%=location.id%>" class = "btn btn-primary">View</a>
@@ -34,6 +34,11 @@
     </div>
   <%end%>
 <%end%>\
+
+
+
+
+
 <br>
   <a href="/<%= @region.name %>/new_location" class = "btn btn-success">+ Add a Location Visited in <%= @region.name.capitalize %> </a>
   <br>
