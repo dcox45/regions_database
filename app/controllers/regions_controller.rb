@@ -10,6 +10,7 @@ class RegionsController < ApplicationController
 #REGIONS
 
   def show
+    @regions = Region.all
     @region = Region.find_by(name: params['name'])
     @locations = Location.all
     render('show.html.erb')
