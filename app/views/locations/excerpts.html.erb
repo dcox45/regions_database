@@ -1,0 +1,11 @@
+<h3 class = "industrial"><%=location.caption %></h3>
+<p align = "center"><b>Near Area:</b> <%= location.nearest_area %></p></p>
+<img class = "photo" src="<%=location.image_url%>" alt="<%=location.caption%>" width = 350 >
+<br>
+<p align = "center" class = "mainthick"><%= location.date %> </p>
+<br>
+<p align = "center">
+  <a href="/regions/<%=@region.name%>/<%=location.id%>" class = "btn btn-primary">View</a>
+  <a href="/<%=@region.name%>/<%=location.id%>/edit" class = "btn btn-warning">Edit</a>
+  <a href="/<%=@region.name%>/destroy_warning/<%=location.id%>" class = "btn btn-danger">Destroy</a>
+</p>
