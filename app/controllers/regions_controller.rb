@@ -3,7 +3,7 @@ class RegionsController < ApplicationController
 #HOME
 
   def home
-    @regions = Region.all
+    @regions = Region.order('begDate')
     render('!home.html.erb')
   end
 
@@ -12,7 +12,7 @@ class RegionsController < ApplicationController
   def show
     @regions = Region.all
     @region = Region.find_by(name: params['name'])
-    @locations = Location.all
+    @locations = Location.order('date')
     render('show.html.erb')
   end
 
@@ -21,11 +21,8 @@ class RegionsController < ApplicationController
   end
 
   def create
-    region = Region.new
-    region.name = params['name']
-    region.image_url = params['image_url']
-    region.begDate = params['begDate']
-    region.endDate = params['endDate']
+    region = Region.new(region_params)
+
     region.save
     redirect_to("/regions/#{region.name}")
   end
@@ -54,6 +51,12 @@ class RegionsController < ApplicationController
     region = Region.find_by(name: params['name'])
     region.destroy
     redirect_to("/regions")
+  end
+
+  private
+
+  def region_params
+    params.require(:region).permit(:image, :name, :image_url, :begDate, :endDate)
   end
 
 end

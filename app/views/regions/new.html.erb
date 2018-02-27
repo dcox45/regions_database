@@ -7,9 +7,11 @@
   <input type="text" id="name" name="name" value="">
   <label for="image_url">Image URL</label>
   <input type="text" id = "image_url" name="image_url" value="">
+  <label for="image">Image</label>
+  <%= file_field :image, class: 'form control' %>
   <label for="begDate">Beginning Date of Trip</label>
   <input type="date" id = "begDate" name="begDate" value="">
   <label for="endDate">End Date of Trip</label>
   <input type="date" id = "endDate" name="endDate" value="">
-  <input type="submit">
+  <input type="submit" class = 'btn btn-primary'>
 </form>
