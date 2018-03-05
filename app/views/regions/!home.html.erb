@@ -1,3 +1,4 @@
+<br>
 <h1 class="mainthemeExtra">THIS IS MY DATABASE</h1>
 <h2 class="maintheme">A way for me to keep track of the places I have been, and when</h2>
 <h3 class="maintheme">(And also a way to practice web development)</h3>
@@ -11,34 +12,49 @@
 <br>
   <br>
 
-<div class="container">
-  <div class="row">
-    <div class="column">
 
-        <% @regions.each do |region| %>
-          <h4><%= link_to region.name.capitalize, "/regions/#{region.name}" %> </h4>
-          <%= link_to image_tag(region.image.url, class: 'media-object'), region.image.url, target: '_blank' %>
-          <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350>
-          <p class = "mainthick"><%= region.begDate %> - <%= region.endDate %></p>
-          <a href="regions/<%=region.name%>" class = "btn btn-primary">View</a>
-          <a href="/<%=region.name%>/edit" class = "btn btn-warning">Edit</a>
-          <a href="/destroy_warning/<%=region.name%>" class = "btn btn-danger">Destroy</a>
+<div class="container-fluid">
+  <% @regions.each_slice(2) do |region, regionb| %>
+    <div class="row">
+      <div class="col-md-6 ">
+        <h4><%= link_to region.name.capitalize, "/regions/#{region.name}" %> </h4>
+        <!-- <%= link_to image_tag(region.image.url, class: 'media-object'), region.image.url, target: '_blank' %> -->
+        <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
+        <p class = "mainthick"><%= region.begDate %> - <%= region.endDate %></p>
+        <a href="regions/<%=region.name%>" class = "btn btn-primary">View</a>
+        <a href="/<%=region.name%>/edit" class = "btn btn-warning">Edit</a>
+        <a href="/destroy_warning/<%=region.name%>" class = "btn btn-danger">Destroy</a>
+        <br>
           <br>
             <br>
+      </div>
+      <div class="col-md-6 ">
+        <h4><%= link_to regionb.name.capitalize, "/regions/#{regionb.name}" %> </h4>
+        <!-- <%= link_to image_tag(regionb.image.url, class: 'media-object'), regionb.image.url, target: '_blank' %> -->
+        <img src="<%=regionb.image_url %>" alt="<%= regionb.name %>" width = 350>
+        <p class = "mainthick"><%= regionb.begDate %> - <%= regionb.endDate %></p>
+        <a href="regions/<%=regionb.name%>" class = "btn btn-primary">View</a>
+        <a href="/<%=regionb.name%>/edit" class = "btn btn-warning">Edit</a>
+        <a href="/destroy_warning/<%=regionb.name%>" class = "btn btn-danger">Destroy</a>
+        <br>
+          <br>
+          <br>
             <br>
-              <br>
-        <% end %>
 
-      <a href="/new_region" class = "btn btn-success btn-lg">+ Add a Region</a>
-      <br>
-      <br>
-      <p class = "writings">In recalling all of the places i've been to, I also feel the need to write down my more detailed memories associated with them.</p>
-      <p class = "writings">At some point, this database will be accompanied by my writing, and be formed into something of a blog.  But for now, this will have to do.</p>
-
+      </div>
     </div>
-  </div>
+  <% end %>
+
+  <a href="/new_region" class = "btn btn-success btn-lg">+ Add a Region</a>
+  <br>
+  <br>
+  <p class = "writings">After going through all the places i've been to, I wanted also to write down my more detailed memories associated with them.</p>
+  <p class = "writings">At some point, this database will be accompanied by my writing, and be formed into something of a blog.  But for now, this will have to do.</p>
 
 </div>
+
+
+
 
 
 <br>

@@ -39,7 +39,7 @@ class RegionsController < ApplicationController
     region.begDate = params['begDate']
     region.endDate = params['endDate']
     region.save
-    redirect_to("/regions")
+    redirect_to("/")
   end
 
   def warning
@@ -50,7 +50,7 @@ class RegionsController < ApplicationController
   def destroy
     region = Region.find_by(name: params['name'])
     region.destroy
-    redirect_to("/regions")
+    redirect_to("/")
   end
 
   private

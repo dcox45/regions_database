@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
+  root "regions#home"
 
-  #HOME PAGE
-  get('/regions', {:controller => 'regions', :action => 'home'})
-
-  #REGIONS CRUD
+  #REGIONS
   get('/regions/:name', {:controller => 'regions', :action => 'show'})
   get('/new_region', {:controller => 'regions', :action => 'new'})
   get('/create_region', {:controller => 'regions', :action => 'create'})
@@ -11,7 +9,7 @@ Rails.application.routes.draw do
   get('/update_region/:name', {:controller => 'regions', :action => 'update'})
   get('/destroy_region/:name', {:controller => 'regions', :action => 'destroy'})
 
-  #LOCATIONS CRUD
+  #LOCATIONS
   get('/regions/:name/:id', {:controller => 'locations', :action => 'show'})
   get('/:name/new_location', {:controller => 'locations', :action => 'new'})
   get('/:name/create_location', {:controller => 'locations', :action => 'create'})
