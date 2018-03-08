@@ -12,7 +12,7 @@ class RegionsController < ApplicationController
   def show
     @regions = Region.all
     @region = Region.find_by(name: params['name'])
-    @locations = Location.order('date')
+    @locations = @region.locations.order('date')
     render('show.html.erb')
   end
 
