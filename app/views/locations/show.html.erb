@@ -1,13 +1,15 @@
 <br>
-<h1 class = "industrial">Location: <%= @location.caption.titleize %></h1>
+<br>
+<h1 class = "industrial"><%= @location.caption.titleize %></h1>
+<br>
 <br>
 <img class = "photo" src="<%=@location.image_url %>" alt="<%=@location.caption %>" width = 500>
 <br>
-<p align = "center" class = "mainthick">Date Visited:  <%= @location.date %></p>
+<p align = "center" class = "mainthick"><b>Date Visited: </b>  <%= @location.date %></p>
+<p align = "center"><b>Near: </b> <%= @location.nearest_area %></p>
 <br>
-<p align = "center">Nearest Area (Neighborhood, Town, City): <%= @location.nearest_area %></p>
-<br>
-<br>
-<a href="/regions/<%=@region.name%>" class = "btn btn-primary">Back to <%=@region.name%></a>
+<p align = "center">
+<a href="/regions/<%=@region.name%>" class = "btn btn-primary"> Back to <%=@region.name%></a>
+</p>
 <br>
 <br>

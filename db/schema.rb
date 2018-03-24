@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308184334) do
+ActiveRecord::Schema.define(version: 20180324013326) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "caption"
-    t.string   "region_id"
+    t.string   "region_name"
     t.string   "image_url"
     t.date     "date"
     t.string   "nearest_area"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "region_id"
+    t.index ["region_id"], name: "index_locations_on_region_id"
   end
 
   create_table "regions", force: :cascade do |t|

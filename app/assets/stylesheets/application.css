@@ -20,7 +20,7 @@ h1 {
 
 
 .background_a {
-  background-color: rgb(242, 227, 227);
+  /* background-color: rgb(242, 227, 227); */
 }
 
 .date {
@@ -65,12 +65,17 @@ h1 {
 .row-border{
   border-bottom: 4px solid;
   border-bottom-style: groove;
-
-;
   border-color: rgb(52, 91, 12);
 }
 
+.title-border{
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+
+}
+
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
+
 
 
 

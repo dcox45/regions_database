@@ -10,7 +10,7 @@
 <br>
 <br>
 <div class="container-fluid">
-  <% @locations.each_slice(2) do |location, locationb|%>
+  <% @locations.each do |location|%>
     <div class="row">
       <div class="col-md-6">
         <a href="/regions/<%=@region.name%>/<%=location.id%>">
@@ -22,18 +22,7 @@
         <a href="/<%=@region.name%>/<%=location.id%>/edit" class = "btn btn-warning">Edit</a>
         <a href="/<%=@region.name%>/destroy_warning/<%=location.id%>" class = "btn btn-danger">Destroy</a>
       </div>
-      <div class="col-md-6">
-        <a href="/regions/<%=@region.name%>/<%=locationb.id%>">
-        <h4 class="media-heading">|    <%=locationb.caption %> </h4>
-        <img class="media-object" src="<%=locationb.image_url%>" alt="..." width = 400>
-        </a>
-        <p>|    <b>Date Visited:</b>   <%= locationb.date %>  |  <b>Near:</b> <%= locationb.nearest_area %></p>
-        <a href="/regions/<%=@region.name%>/<%=locationb.id%>" class = "btn btn-primary">View</a>
-        <a href="/<%=@region.name%>/<%=locationb.id%>/edit" class = "btn btn-warning">Edit</a>
-        <a href="/<%=@region.name%>/destroy_warning/<%=locationb.id%>" class = "btn btn-danger">Destroy</a>
-
-        </div>
-      </div>
+    </div>
       <br>
       <br>
       <br>
@@ -42,6 +31,10 @@
       <a href="/<%=@region.name%>/<%=location.id%>/edit" class = "btn btn-danger">There is a location with an invalid region ID :(</a>
     <%end%>
   <%end%>
+
+  <!-- <% @locations.each do |location| %>
+    <%= location.caption %>
+  <% end %> -->
 </div>
 <br>
 <br>
