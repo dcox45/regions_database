@@ -1,32 +1,31 @@
-/*CRUCIAL style*/
-
-.column {
-    float: left;
-    width: 33.33%;
-}
-
-.background_a {
-  background-color: FloralWhite;
-}
-
-
 /*FOR HOME PAGE */
 
 .maintheme {
-  color: darkgreen;
+  color: rgb(33, 58, 8);
   text-align: center;
 }
 
-.mainthemeExtra {
-  color: darkgreen;
+h1 {
+  color: rgb(33, 58, 8);
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
 }
 
 .industrial {
-  color: brown;
+  color: rgb(76, 45, 17);
   text-align: center;
+  font-size: 60px;
+}
+
+
+.background_a {
+  background-color: rgb(242, 227, 227);
+}
+
+.date {
+  color:rgb(76, 29, 29);
+  font-weight: 700;
 }
 
 .region_name {
@@ -36,15 +35,40 @@
 /* FOR PHOTOS  */
 .photo {
   display: block;
-    margin-left: auto;
-    margin-right: auto
+  margin-left: auto;
+  margin-right: auto
 }
+
+/* //////////////////////////////////////////////////// */
 
 .navbar-custom {
     font-weight: bold;
-    background-color: darkgreen;
+    background-color: rgb(52, 91, 12);
+    margin-top: -6px;
+    margin-bottom: -6px;
 }
 
+.nav-colour {
+  color: white;
+}
+
+/* //////////////////////////////////////////////////////// */
+
+.margin-a {
+  margin-left: 180px;
+  margin-top: 70px;
+}
+.margin-b{
+  margin-bottom: 20px;
+}
+
+.row-border{
+  border-bottom: 4px solid;
+  border-bottom-style: groove;
+
+;
+  border-color: rgb(52, 91, 12);
+}
 
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 

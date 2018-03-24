@@ -9,6 +9,7 @@ class LocationsController < ApplicationController
   def show
     @region = Region.find_by(name: params['name'])
     @location = Location.find(params['id'])
+
   end
 
   def new
