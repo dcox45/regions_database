@@ -6,11 +6,11 @@
   <label for="name">Caption: </label>
   <input type="text" id="caption" name="caption" value="">
 
-  <label for="region_id">Region: </label>
-  <select name ="region_id" id = "region_id">
+  <label for="region_name">Region: </label>
+  <select name ="region_name" id = "region_name">
     <option selected><%= @region.name.to_s.capitalize %></option>
       <% @regions.each do |r| %>
-        <option type = "text" id ="region_id" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
+        <option type = "text" id ="region_name" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
 
       <% end %>
   </select>

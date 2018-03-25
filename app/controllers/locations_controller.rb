@@ -24,15 +24,29 @@ class LocationsController < ApplicationController
 
     location = Location.new
     location.caption = params['caption']
-    location.region_id = params['region_id']
+    location.region_name = params['region_name']
     location.image_url = params['image_url']
     location.date = params['date']
     location.nearest_area = params['nearest_area']
+    l = location.region_name.downcase
+
+
+    if l == "chicagoland"
+      location.region_id = 3
+    elsif l == "roadtrip 2016"
+      location.region_id = 4
+    elsif l =="europe"
+      location.region_id = 13
+    elsif l == "toronto"
+      location.region_id = 18
+    end
+
     location.save
     redirect_to("/regions/#{region.name}/#{location.id}")
   end
 
   def edit
+    @regions = Region.all
     @region = Region.find_by(name: params['name'])
     @location = Location.find(params['id'])
     render('edit.html.erb')
@@ -43,10 +57,22 @@ class LocationsController < ApplicationController
 
     location = Location.find(params['id'])
     location.caption = params['caption']
-    location.region_id = params['region_id']
+    location.region_name = params['region_name']
     location.image_url = params['image_url']
     location.date = params['date']
     location.nearest_area = params['nearest_area']
+    l = location.region_name.downcase
+
+    if l == "chicagoland"
+      location.region_id = 3
+    elsif l == "roadtrip 2016"
+      location.region_id = 4
+    elsif l =="europe"
+      location.region_id = 13
+    elsif l == "toronto"
+      location.region_id = 18
+    end
+
     location.save
     redirect_to("/regions/#{region.name}")
   end

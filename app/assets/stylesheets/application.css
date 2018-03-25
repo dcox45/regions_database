@@ -1,15 +1,18 @@
 /*FOR HOME PAGE */
-
-.maintheme {
-  color: rgb(33, 58, 8);
+h1 {
+  color: rgb(17, 40, 2);
   text-align: center;
+  font-size: 70px;
+  font-weight: 600;
 }
 
-h1 {
-  color: rgb(33, 58, 8);
+/* .space-lg {
+  margin-top: : 300px;
+} */
+
+.maintheme {
+  color: rgb(17, 40, 2);
   text-align: center;
-  font-size: 80px;
-  font-weight: bold;
 }
 
 .industrial {
@@ -18,21 +21,27 @@ h1 {
   font-size: 60px;
 }
 
+.regions{
+  color: rgb(255,255,255);
+  font-size: 60px;
+  font-weight: 500;
+  margin-left: 94px;
 
-.background_a {
-  /* background-color: rgb(242, 227, 227); */
 }
 
-.date {
-  color:rgb(76, 29, 29);
-  font-weight: 700;
+.background_a{
+
+}
+
+.background_b {
+  background-color: rgb(17, 40, 2);
 }
 
 .region_name {
 
 }
 
-/* FOR PHOTOS  */
+/* --------- PHOTOS --------- */
 .photo {
   display: block;
   margin-left: auto;
@@ -43,7 +52,7 @@ h1 {
 
 .navbar-custom {
     font-weight: bold;
-    background-color: rgb(52, 91, 12);
+    background-color: rgb(17, 40, 2);
     margin-top: -6px;
     margin-bottom: -6px;
 }
@@ -65,18 +74,29 @@ h1 {
 .row-border{
   border-bottom: 4px solid;
   border-bottom-style: groove;
-  border-color: rgb(52, 91, 12);
+  border-color: rgb(17, 40, 2);
 }
 
-.title-border{
-  border-top: 4px solid;
-  border-bottom: 4px solid;
+.regions-border{
+  border-left: 4px solid;
+  border-right: 4px solid;
 
 }
+
+
 
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 
+.date {
+  color:rgb(76, 29, 29);
+  font-weight: 700;
+}
 
+.writings{
+  color: rgb(17, 40, 2);
+
+  font-weight: 500;
+}
 
 
 

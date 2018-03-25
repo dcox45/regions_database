@@ -7,8 +7,14 @@
 <form class="" action="/<%=@region.name%>/update_location/<%=@location.id%>">
   <label for="caption">Caption</label>
   <input type="text" id="caption" name="caption" value="<%= @location.caption%>">
-  <label for="region_id">Region</label>
-  <input type="text" id="region_id" name="region_id" value="<%= @location.region_id%>">
+  <label for="region_name">Region</label>
+  <select name ="region_name" id = "region_name">
+    <option selected><%= @region.name.to_s.capitalize %></option>
+      <% @regions.each do |r| %>
+        <option type = "text" id ="region_name" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
+
+      <% end %>
+  </select>
   <label for="image_url">Image URL</label>
   <input type="text" id = "image_url" name="image_url" value="<%= @location.image_url%>">
   <label for="date">Date Visited</label>
