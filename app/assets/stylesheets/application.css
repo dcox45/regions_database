@@ -83,6 +83,18 @@ h1 {
 
 }
 
+th, td {
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+tr {
+  border-color: rgb(76, 45, 17);
+  border-bottom: 4px solid;
+  border-bottom: 4px solid;
+}
+
 
 
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/

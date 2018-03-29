@@ -28,9 +28,9 @@ class LocationsController < ApplicationController
     location.image_url = params['image_url']
     location.date = params['date']
     location.nearest_area = params['nearest_area']
+
+# REGION NAME == REGION_ID
     l = location.region_name.downcase
-
-
     if l == "chicagoland"
       location.region_id = 3
     elsif l == "roadtrip 2016"

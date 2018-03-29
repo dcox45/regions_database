@@ -6,38 +6,37 @@
   <br>
     <br>
 
+<!-- <% if @region == nil %>
+  <h1>There are no locations associated with this region...yet!</h1>
+<%end%> -->
+
+
 <a href="/" class = "btn btn-primary">Back to Home</a>
 <br>
 <br>
 <div class="container-fluid">
-  <% @locations.each do |location|%>
-    <div class="row">
-      <div class="col-md-6">
-        <a href="/regions/<%=@region.name%>/<%=location.id%>">
-        <h4 class="media-heading">|    <%=location.caption %> </h4>
-        <img class="media-object" src="<%=location.image_url%>" alt="..." width = 400 height = 260>
-        </a>
-        <p>|    <b>Date Visited:</b>   <%= location.date %>  |  <b>Near:</b> <%= location.nearest_area %></p>
-        <a href="/regions/<%=@region.name%>/<%=location.id%>" class = "btn btn-primary">View</a>
-        <a href="/<%=@region.name%>/<%=location.id%>/edit" class = "btn btn-warning">Edit</a>
-        <a href="/<%=@region.name%>/destroy_warning/<%=location.id%>" class = "btn btn-danger">Destroy</a>
-      </div>
-    </div>
-      <br>
-      <br>
-      <br>
-
-    <%if location.region_id == nil %>
-      <a href="/<%=@region.name%>/<%=location.id%>/edit" class = "btn btn-danger">There is a location with an invalid region ID :(</a>
+  <table>
+    <% @locations.in_groups_of(2, false) do |location| %>
+      <tr>
+        <% for l in location %>
+          <td>
+            <a href="/regions/<%=@region.name%>/<%=l.id%>">
+            <h4 class="media-heading">   <%=l.caption %>       </h4>
+            <img class="media-object" src="<%=l.image_url%>" alt="..." width = 400 height = 270>
+            </a>
+            <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p>
+            <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary">View</a>
+            <a href="/<%=@region.name%>/<%=l.id%>/edit" class = "btn btn-warning">Edit</a>
+            <a href="/<%=@region.name%>/destroy_warning/<%=l.id%>" class = "btn btn-danger">Destroy</a>
+          </td>
+        <%end%>
+      </tr>
     <%end%>
-  <%end%>
+  </table>
 
-  <!-- <% @locations.each do |location| %>
-    <%= location.caption %>
-  <% end %> -->
 </div>
 <br>
 <br>
-  <a href="/<%= @region.name %>/new_location" class = "btn btn-success">+ Add a Location Visited in <%= @region.name.capitalize %> </a>
+  <a href="/<%= @region.name %>/new_location" class = "btn btn-success btn-lg">+ Add a Location Visited in <%= @region.name.capitalize %> </a>
 <br>
 <br>

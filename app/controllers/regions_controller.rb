@@ -3,7 +3,7 @@ class RegionsController < ApplicationController
 #HOME
 
   def home
-    @regions = Region.order('begDate')
+    @regions = Region.all.order('begDate')  # RECENTLY ADDED ".ALL"
     render('!home.html.erb')
   end
 
@@ -12,7 +12,7 @@ class RegionsController < ApplicationController
   def show
     @regions = Region.all
     @region = Region.find_by(name: params['name'])
-    @locations = @region.locations
+    @locations = @region.locations.order('date')
     render('show.html.erb')
   end
 
@@ -29,7 +29,7 @@ class RegionsController < ApplicationController
     region.description = params['description']
     region.save
     region.save
-    redirect_to("/regions/#{region.name}")
+    redirect_to("/")
   end
 
   def edit
