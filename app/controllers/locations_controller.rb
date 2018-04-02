@@ -39,6 +39,8 @@ class LocationsController < ApplicationController
       location.region_id = 13
     elsif l == "toronto"
       location.region_id = 18
+    elsif l == "eastern canada"
+      location.region_id = 24
     end
 
     location.save
@@ -61,8 +63,8 @@ class LocationsController < ApplicationController
     location.image_url = params['image_url']
     location.date = params['date']
     location.nearest_area = params['nearest_area']
-    l = location.region_name.downcase
 
+    l = location.region_name.downcase
     if l == "chicagoland"
       location.region_id = 3
     elsif l == "roadtrip 2016"
@@ -71,6 +73,8 @@ class LocationsController < ApplicationController
       location.region_id = 13
     elsif l == "toronto"
       location.region_id = 18
+    elsif l == "eastern canada"
+      location.region_id = 24
     end
 
     location.save

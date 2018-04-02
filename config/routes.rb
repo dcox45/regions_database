@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get('/destroy_warning/:name', {:controller => 'regions', :action => 'warning'})
   get('/:name/destroy_warning/:id', {:controller => 'locations', :action => 'warning'})
 
+  get('/about', {:controller => 'regions', :action => 'about'})
+
+
   #RESTRUCURING CREATE
   #get('/new_region', {:controller => 'regions', :action => 'new'})
   #get('/new_location', {:controller => 'locations', :action => 'new'})

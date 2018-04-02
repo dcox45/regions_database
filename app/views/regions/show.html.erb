@@ -1,20 +1,13 @@
 <br>
-<h1 class = "mainthemeExtra"><%= @region.name.titleize %></h1>
+<h2 class = "mainthemeExtra"><%= @region.name.titleize %></h2>
 <img class = "photo" src="<%=@region.image_url %>" alt="<%=@region.name %>" width = 160>
-<p class = "mainthick" align = "center"><%= @region.begDate %> - <%= @region.endDate %></p>
+<p class = "date" align = "center"><%= @region.begDate %> - <%= @region.endDate %></p>
 <br>
-  <br>
-    <br>
-
-<!-- <% if @region == nil %>
-  <h1>There are no locations associated with this region...yet!</h1>
-<%end%> -->
 
 
-<a href="/" class = "btn btn-primary">Back to Home</a>
-<br>
 <br>
 <div class="container-fluid">
+  <a href="/" class = "btn btn-primary btn-lg btn-block">Back to Home</a>
   <table>
     <% @locations.in_groups_of(2, false) do |location| %>
       <tr>
@@ -22,21 +15,24 @@
           <td>
             <a href="/regions/<%=@region.name%>/<%=l.id%>">
             <h4 class="media-heading">   <%=l.caption %>       </h4>
-            <img class="media-object" src="<%=l.image_url%>" alt="..." width = 400 height = 270>
+            <img class="media-object" src="<%=l.image_url%>" alt="..." width = 400 >
             </a>
             <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p>
-            <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary">View</a>
+            <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary">View Details</a>
             <a href="/<%=@region.name%>/<%=l.id%>/edit" class = "btn btn-warning">Edit</a>
             <a href="/<%=@region.name%>/destroy_warning/<%=l.id%>" class = "btn btn-danger">Destroy</a>
           </td>
         <%end%>
       </tr>
     <%end%>
-  </table>
+    <!-- <% if @locations == nil %>
+      <h1>There are no locations associated with this region...yet!</h1>
+    <%end%> -->
+  </table> <br> <br>
+  <a href="/<%= @region.name %>/new_location" class = "btn btn-success btn-lg btn-block">+ Add a Location Visited in <%= @region.name.capitalize %> </a>
 
 </div>
 <br>
 <br>
-  <a href="/<%= @region.name %>/new_location" class = "btn btn-success btn-lg">+ Add a Location Visited in <%= @region.name.capitalize %> </a>
 <br>
 <br>

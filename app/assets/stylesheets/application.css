@@ -1,10 +1,19 @@
 /*FOR HOME PAGE */
 h1 {
   color: rgb(17, 40, 2);
-  text-align: center;
-  font-size: 70px;
-  font-weight: 600;
+  font-size: 55px;
+  font-weight: 750;
+  margin-bottom: -3px;
 }
+
+h2 {
+  color: rgb(17, 40, 2);
+  font-size: 55px;
+  font-weight: 750;
+  text-align: center;
+}
+
+h5
 
 /* .space-lg {
   margin-top: : 300px;
@@ -23,10 +32,16 @@ h1 {
 
 .regions{
   color: rgb(255,255,255);
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 500;
-  margin-left: 94px;
+  /* margin-left: 94px; */
+  text-align: center;
+}
 
+.regions_b{
+  color: rgb(17, 40, 2);
+  font-weight: 650;
+  font-size: 17px;
 }
 
 .background_a{
@@ -50,14 +65,17 @@ h1 {
 
 /* //////////////////////////////////////////////////// */
 
-.navbar-custom {
+.nav-custom {
     font-weight: bold;
     background-color: rgb(17, 40, 2);
     margin-top: -6px;
     margin-bottom: -6px;
+    margin-left: 163px;
+    margin-right: 163px;
 }
 
-.nav-colour {
+.nav-color {
+  margin-left: 20px;
   color: white;
 }
 
@@ -107,7 +125,7 @@ tr {
 .writings{
   color: rgb(17, 40, 2);
 
-  font-weight: 500;
+  font-weight: 800;
 }
 
 

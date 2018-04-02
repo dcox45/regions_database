@@ -22,7 +22,7 @@ class RegionsController < ApplicationController
 
   def create
     region = Region.new
-    region.name = params['name']
+    region.name = params['name'].downcase
     region.image_url = params['image_url']
     region.begDate = params['begDate']
     region.endDate = params['endDate']
@@ -39,7 +39,7 @@ class RegionsController < ApplicationController
 
   def update
     region = Region.find_by(name: params['name'])
-    region.name = params['name']
+    region.name = params['name'].downcase
     region.image_url = params['image_url']
     region.begDate = params['begDate']
     region.endDate = params['endDate']
@@ -57,6 +57,10 @@ class RegionsController < ApplicationController
     region = Region.find_by(name: params['name'])
     region.destroy
     redirect_to("/")
+  end
+
+  def about
+    render("about.html.erb")
   end
 
   private
