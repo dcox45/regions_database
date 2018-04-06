@@ -15,7 +15,12 @@ Rails.application.routes.draw do
   get('/:name/create_location', {:controller => 'locations', :action => 'create'})
   get('/:name/:id/edit', {:controller => 'locations', :action => 'edit'})
   get('/:name/update_location/:id', {:controller => 'locations', :action => 'update'})
-  get(':name/destroy_location/:id', {:controller => 'locations', :action => 'destroy'})
+  get('/:name/destroy_location/:id', {:controller => 'locations', :action => 'destroy'})
+
+  get('/all_locations', {:controller => 'locations', :action => 'index'})
+
+
+
 
   #WARNINGS
   get('/destroy_warning/:name', {:controller => 'regions', :action => 'warning'})

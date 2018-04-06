@@ -34,6 +34,7 @@ h5
   color: rgb(255,255,255);
   font-size: 40px;
   font-weight: 500;
+  /* padding-left: 65px; */
   /* margin-left: 94px; */
   /* text-align: center; */
 }
@@ -111,10 +112,14 @@ h5
 }
 
 .custom-wrapper {
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  /* padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px; */
+  margin-left: 80px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
 }
 

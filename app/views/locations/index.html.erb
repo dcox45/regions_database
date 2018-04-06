@@ -1,0 +1,17 @@
+<br>
+<div class="container">
+  <h2>All Locations</h2> <br> <br>
+  <div class="row">
+    <div class="col" align = "center">
+      <% @locations.each do | l | %>
+        <a href="">
+        <h4 class="">   <%=l.caption.titleize %>       </h4>
+        <img src="<%=l.image_url%>" class="rounded" alt="..." width = 350 >
+        </a>
+        <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p> <br>
+      <%end%>
+    </div>
+
+  </div>
+
+</div>

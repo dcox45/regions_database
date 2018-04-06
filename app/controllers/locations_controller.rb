@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
 
   def index
     @region = Region.find_by(name: params['name'])
-    @locations = Location.all
+    @locations = Location.all.order('date')
     render('index.html.erb')
   end
 
