@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get('/destroy_region/:name', {:controller => 'regions', :action => 'destroy'})
 
   #LOCATIONS
-  get('/regions/:name/:id', {:controller => 'locations', :action => 'show'})
+  get('/regions/:id', {:controller => 'locations', :action => 'show'})
   get('/:name/new_location', {:controller => 'locations', :action => 'new'})
   get('/:name/create_location', {:controller => 'locations', :action => 'create'})
   get('/:name/:id/edit', {:controller => 'locations', :action => 'edit'})
