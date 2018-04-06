@@ -35,7 +35,7 @@ h5
   font-size: 40px;
   font-weight: 500;
   /* margin-left: 94px; */
-  text-align: center;
+  /* text-align: center; */
 }
 
 .regions_b{
@@ -45,6 +45,7 @@ h5
 }
 
 .background_a{
+  background-color:rgb(36, 114, 18);
 
 }
 
@@ -68,10 +69,13 @@ h5
 .nav-custom {
     font-weight: bold;
     background-color: rgb(17, 40, 2);
-    margin-top: -6px;
-    margin-bottom: -6px;
+    /* margin-top: -6px;
+    margin-bottom: -6px; */
     margin-left: 163px;
     margin-right: 163px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
 }
 
 .nav-color {
@@ -101,16 +105,23 @@ h5
 
 }
 
-th, td {
-    padding-left: 165px;
-    padding-right: 165px;
+td {
+    padding-left: 40;
+    padding-right: 140px;
     padding-top: 40px;
     padding-bottom: 40px;
+    background-color: rgb(242, 113, 205);
+    /* margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px; */ */
+
+
 }
 tr {
   border-color: rgb(76, 45, 17);
   border-bottom: 4px solid;
-  border-bottom: 4px solid;
+  background-color: rgb(129, 166, 226);
 }
 
 
@@ -122,9 +133,19 @@ tr {
   font-weight: 700;
 }
 
+.writings-fp{
+  color: rgb(17, 40, 2);
+  font-weight: 800;
+}
+
 .writings{
   color: rgb(17, 40, 2);
+  text-align: center;
+  font-weight: 800;
+}
 
+.edit-labels{
+  color: rgb(17, 40, 2);
   font-weight: 800;
 }
 

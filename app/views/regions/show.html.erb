@@ -1,27 +1,37 @@
 <br>
 <h2 class = "mainthemeExtra"><%= @region.name.titleize %></h2>
 <img class = "photo" src="<%=@region.image_url %>" alt="<%=@region.name %>" width = 160>
-<p class = "date" align = "center"><%= @region.begDate %> - <%= @region.endDate %></p>
-<br>
+<p class = "date" align = "center"><%= @region.begDate %> - <%= @region.endDate %></p> <br>
 
-
-<br>
-<div class="container-fluid">
-  <a href="/" class = "btn btn-primary btn-lg btn-block">Back to Home</a>
+<div class="container">
+  <!-- <a href="/" class = "btn btn-primary btn-lg btn-block">Back to Home</a> <br> -->
+  <div class="row background_b">
+    <div class="col">
+      <h3 class = "regions">Locations: </h3>
+    </div>
+  </div> <br>
   <table>
     <% @locations.in_groups_of(2, false) do |location| %>
       <tr>
         <% for l in location %>
           <td>
-            <a href="/regions/<%=@region.name%>/<%=l.id%>">
-            <h4 class="media-heading">   <%=l.caption %>       </h4>
-            <img class="media-object" src="<%=l.image_url%>" alt="..." width = 400 >
-            </a>
-            <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p>
-            <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary">View Details</a>
-            <a href="/<%=@region.name%>/<%=l.id%>/edit" class = "btn btn-warning">Edit</a>
-            <a href="/<%=@region.name%>/destroy_warning/<%=l.id%>" class = "btn btn-danger">Destroy</a>
+            <div class="">
+              <a href="/regions/<%=@region.name%>/<%=l.id%>">
+              <h4 class="">   <%=l.caption %>       </h4>
+            </div>
+            <div class="">
+
+
+              <img src="<%=l.image_url%>" class="img-fluid" alt="..." width = 400=>
+              </a>
+              <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p>
+              <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary">View Details</a>
+              <a href="/<%=@region.name%>/<%=l.id%>/edit" class = "btn btn-warning">Edit</a>
+              <a href="/<%=@region.name%>/destroy_warning/<%=l.id%>" class = "btn btn-danger">Destroy</a>
           </td>
+          </div>
+
+
         <%end%>
       </tr>
     <%end%>
