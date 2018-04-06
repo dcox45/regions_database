@@ -1,6 +1,6 @@
 /*FOR HOME PAGE */
 h1 {
-  color: rgb(17, 40, 2);
+  coloformgb(17, 40, 2);
   font-size: 55px;
   font-weight: 750;
   margin-bottom: -3px;
@@ -105,16 +105,29 @@ h5
 
 }
 
-td {
+.location-row {
+  border-color: rgb(76, 45, 17);
+  border-bottom: 4px solid;
+}
+
+.custom-wrapper {
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+/* td {
     padding-left: 40;
     padding-right: 140px;
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: rgb(242, 113, 205);
-    /* margin-left: 100px;
+    margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
-    margin-bottom: 50px; */ */
+    margin-bottom: 50px;
 
 
 }
@@ -122,7 +135,7 @@ tr {
   border-color: rgb(76, 45, 17);
   border-bottom: 4px solid;
   background-color: rgb(129, 166, 226);
-}
+} */
 
 
 
@@ -144,9 +157,14 @@ tr {
   font-weight: 800;
 }
 
-.edit-labels{
+.form-labels{
   color: rgb(17, 40, 2);
   font-weight: 800;
+}
+
+.form-cells{
+  border-color: rgb(17, 40, 2);
+  border-radius: 3px;
 }
 
 

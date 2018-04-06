@@ -2,18 +2,32 @@
 <div class = "page-header"><h2 class ="">Add a New Region</h2></div>
 <br>
 <br>
-<form class="" action="/create_region" >
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" value="">
-  <label for="image_url">Image URL</label>
-  <input type="text" id = "image_url" name="image_url" value="">
-  <label for="image">Image</label>
-  <%= file_field :image, class: 'form control' %>
-  <label for="begDate">Beginning Date of Trip</label>
-  <input type="date" id = "begDate" name="begDate" value="">
-  <label for="endDate">End Date of Trip</label>
-  <input type="date" id = "endDate" name="endDate" value="">
-  <label for="description">Description</label>
-  <input type="text" id="description" name="description" size = 150>
-  <input type="submit" class = 'btn btn-primary'>
-</form>
+<div class="container">
+  <form class="" action="/create_region" >
+    <div class="form-group">
+      <label for="name" class = "form-labels form-cells">Name</label>
+      <input type="text" class = "form-control form-cells" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="image_url" class = "form-labels form-cells">Image URL</label>
+      <input type="text" class = "form-control form-cells" id = "image_url" name="image_url" >
+    </div>
+
+    <div class="form-group">
+      <label for="begDate" class = "form-labels">Beginning Date of Trip</label>
+      <input type="date" class = "form-control form-cells" id = "begDate" name="begDate">
+    </div>
+
+    <div class="form-group">
+      <label for="endDate" class = "form-labels">End Date of Trip</label>
+      <input type="date" class = "form-control form-cells" id = "endDate" name="endDate" >
+    </div>
+
+    <div class="form-group">
+      <label for="description" class = "form-labels">Description</label>
+      <input type="text" size = "150" class = "form-control form-cells" id="description" name="description" > <br>
+    <input type="submit" class = "btn form-labels">
+
+  </form>
+</div>

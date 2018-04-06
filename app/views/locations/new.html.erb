@@ -2,28 +2,46 @@
 <h2 class = "">Add a New Location</h2>
 <br>
 <br>
-<form class="" action="/<%= @region.name %>/create_location" >
-  <label for="name">Caption: </label>
-  <input type="text" id="caption" name="caption" value="">
 
-  <label for="region_name">Region: </label>
-  <select name ="region_name" id = "region_name">
-    <option selected><%= @region.name.to_s.titleize %></option>
-      <% @regions.each do |r| %>
-        <option type = "text" id ="region_name" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
+<div class="container">
 
-      <% end %>
-  </select>
+  <form class="" action="/<%= @region.name %>/create_location" >
+    <div class="form-group">
+      <label for="name" class = "form-labels form-cells">Caption</label>
+      <input type="text" class = "form-control form-cells" id="caption" name="caption">
+    </div>
 
+    <div class="form-group">
+      <label for="region_name" class = "form-labels form-cells">Region: </label>
+      <select name ="region_name" class = "form-control form-cells" id = "region_name">
+        <option selected><%= @region.name.to_s.titleize %></option>
+          <% @regions.each do |r| %>
+            <option type = "text" id ="region_name" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
 
-  <label for="image_url">Image URL: </label>
-  <input type="text" id = "image_url" name="image_url" value="">
-  <label for="date">Date Visited: </label>
-  <input type="date" id = "date" name="date" value="">
-  <label for="nearest_area">Nearest Area (Neighborhood, Town, City):</label>
-  <input type="text" id = "nearest_area" name="nearest_area" value="">
-  <input type="submit">
-</form>
+          <% end %>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="image_url" class = "form-labels form-cells">Image URL</label>
+      <input type="text" class = "form-control form-cells" id = "image_url" name="image_url" >
+    </div>
+
+    <div class="form-group">
+      <label for="date" class = "form-labels">Date Visited</label>
+      <input type="date" class = "form-control form-cells" id = "date" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="nearest_area" class = "form-labels">Nearest Area (Neighborhood, Town, City):</label>
+      <input type="text" class = "form-control form-cells" id = "nearest_area" name="nearest_area" >
+    </div>
+
+    <input type="submit" class = "btn form-labels">
+
+  </form>
+</div>
+
 
 
 
