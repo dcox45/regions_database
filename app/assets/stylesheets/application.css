@@ -8,7 +8,7 @@ h1 {
 
 h2 {
   color: rgb(17, 40, 2);
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 750;
   text-align: center;
 }
@@ -151,6 +151,10 @@ tr {
   font-weight: 700;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .writings-fp{
   color: rgb(17, 40, 2);
   font-weight: 800;
@@ -158,8 +162,17 @@ tr {
 
 .writings{
   color: rgb(17, 40, 2);
-  text-align: center;
+  text-align: left;
   font-weight: 800;
+  line-height: 2.0;
+}
+
+/* //////////////FORMS///////////////////// */
+
+.form-custom{
+  padding: 12px 18px;
+  border-color: rgb(17, 40, 2);
+  border: 3px solid;
 }
 
 .form-labels{
@@ -172,6 +185,11 @@ tr {
   border-radius: 3px;
 }
 
+
+/* .btn-add{
+  border-color: rgb(17, 40, 2);
+  border-radius: 5px;
+} */
 
 
 /*
