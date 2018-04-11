@@ -7,10 +7,11 @@
     </div>
   </div> <br> <br>
 
+  <!-- @regions.order('date').find(first).begDate - @regions.order('date').find(last).endDate -  -->
 
   <div class="row background_b">
     <div class="col">
-      <h3 class = "regions"> <%=@regions.count.to_s %> Regions </h3>
+      <h3 class = "regions"> <%=@regions.count.to_s %> Regions  &nbsp;&nbsp; | &nbsp;&nbsp; 25 Years   </h3>
     </div>
   </div> <br>
 
@@ -25,9 +26,9 @@
               <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
             </a>
             <p class = "date" align = "center"><%= region.begDate %>  &nbsp; -  &nbsp;  <%= region.endDate %></p>
-            <a href="regions/<%=region.name%>" class = "btn btn-primary margin-b">View Locations</a>
-            <!-- <a href="/<%=region.name%>/edit" class = "btn btn-warning margin-b">Edit</a> -->
-            <!-- <a href="/destroy_warning/<%=region.name.downcase%>" class = "btn btn-danger margin-b">Destroy</a> -->
+            <a href="regions/<%=region.name%>" class = "btn btn-primary margin-b">View Locations Visited</a>
+            <a href="/<%=region.name%>/edit" class = "btn btn-warning margin-b">Edit</a>
+            <a href="/destroy_warning/<%=region.name.downcase%>" class = "btn btn-danger margin-b">Destroy</a>
           </div>
           <div align = "left" class="media-body margin-a writings-fp">
             <br>
@@ -42,17 +43,9 @@
     <br>
   <% end %>
 
-  <!-- <a href="/new_region" class = "btn btn-success btn-lg btn-block">+ Add a Region</a> -->
-  <br>
-  <br>
+  <a href="/new_region" class = "btn btn-success btn-lg btn-block">+ Add a Region</a> <br><br>
   <p class = "writings" >This database will soon be accompanied by my writing, and be formed into something of a blog.  But for now, this will have to do.</p>
-
 </div>
-
-
-
-
-
 <br>
-<br>
-<br>
+  <br>
+  <br>
