@@ -1,4 +1,4 @@
-class AddAttachmentImageToRegions < ActiveRecord::Migration
+class AddAttachmentImageToRegions < ActiveRecord::Migration[5.0]
   def self.up
     change_table :regions do |t|
       t.attachment :image
