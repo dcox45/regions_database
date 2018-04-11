@@ -7,11 +7,11 @@
     </div>
   </div> <br> <br>
 
-  <!-- @regions.order('date').find(first).begDate - @regions.order('date').find(last).endDate -  -->
+
 
   <div class="row background_b">
     <div class="col">
-      <h3 class = "regions"> <%=@regions.count.to_s %> Regions  &nbsp;&nbsp; | &nbsp;&nbsp; 25 Years   </h3>
+      <h3 class = "regions"> <%=@regions.count.to_s %> Regions  &nbsp;&nbsp; | &nbsp;&nbsp; <%= @years %> Years  </h3>
     </div>
   </div> <br>
 
@@ -43,7 +43,7 @@
     <br>
   <% end %>
 
-  <a href="/new_region" class = "btn btn-success btn-lg btn-block">+ Add a Region</a> <br><br>
+  <a href="/new_region" class = "btn btn-success btn-lg btn-block btn-add">+ Add a Region</a> <br><br>
   <p class = "writings" >This database will soon be accompanied by my writing, and be formed into something of a blog.  But for now, this will have to do.</p>
 </div>
 <br>
