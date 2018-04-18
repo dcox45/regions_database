@@ -13,11 +13,8 @@ h2 {
   text-align: center;
 }
 
-h5
 
-/* .space-lg {
-  margin-top: : 300px;
-} */
+
 
 .maintheme {
   color: rgb(17, 40, 2);
@@ -32,8 +29,8 @@ h5
 
 .regions{
   color: rgb(255,255,255);
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 37px;
+  font-weight: 400;
   /* padding-left: 65px; */
   /* margin-left: 94px; */
   /* text-align: center; */
@@ -154,6 +151,12 @@ tr {
 .date {
   color:rgb(76, 29, 29);
   font-weight: 700;
+}
+
+.data {                                    /*ALIGNS INFO ("LOCATIONS VISITED" FOR EXAMPLE) WITH DESCRIPTION OF REGION*/
+  border: 1px solid;
+  text-align: center;
+  margin-left: -15px;
 }
 
 .underline {

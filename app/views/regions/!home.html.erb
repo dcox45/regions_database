@@ -11,7 +11,7 @@
 
   <div class="row background_b ">
     <div class="col">
-      <h3 class = "regions"> <%=@regions.count.to_s %> Regions  &nbsp;&nbsp; | &nbsp;&nbsp; <%= @years %> Years  </h3>
+      <h3 class = "regions"> <%=@regions.count.to_s %> Regions  &nbsp; | &nbsp; <%= @years %> Years &nbsp; | &nbsp; <%=@days %> Days </h3>
     </div>
   </div> <br>
 
@@ -32,7 +32,9 @@
           </div>
           <div align = "left" class="media-body margin-a writings-fp">
             <br>
-            <br>
+            <div class=" col-md-3">
+              <p class = "data"><%=region.locations.count%> Locations</p>
+            </div> <br>
             <%= region.description %>
 
           </div>
