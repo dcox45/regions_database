@@ -87,16 +87,24 @@ h5
 /* //////////////////////////////////////////////////////// */
 
 .margin-a {
-  margin-left: 180px;
-  margin-top: 70px;
+  margin-right: 60px;
+  margin-left: 120px;
+  margin-top: 85px;
 }
 .margin-b{
   margin-bottom: 20px;
 }
 
-.row-border{
-  border-bottom: 4px solid;
+.row-bottomborder{
+  border-bottom: 6px solid;
   border-bottom-style: groove;
+  border-color: rgb(17, 40, 2);
+}
+
+.row-sideborders{
+  border-left: 6px solid;
+  border-left: 6px solid;
+  border-style: groove;
   border-color: rgb(17, 40, 2);
 }
 
@@ -106,10 +114,7 @@ h5
 
 }
 
-.location-row {
-  border-color: rgb(76, 45, 17);
-  border-bottom: 4px solid;
-}
+
 
 .custom-wrapper {
   /* padding-left: 40px;
