@@ -86,7 +86,7 @@ class LocationsController < ApplicationController
     end
 
     location.save
-    redirect_to("/regions/#{region.name}")
+    redirect_to("/regions/#{region.name}/#{location.id}")
   end
 
   def warning

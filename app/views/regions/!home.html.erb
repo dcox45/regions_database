@@ -33,12 +33,12 @@
           <div align = "left" class="media-body margin-a writings-fp">
             <br>
             <div class=" col-md-3">
-              <p class = "data">-<%= region.locations.count %> Locations</p>
+              <p class = "data"><%= region.locations.count %> Locations</p>
             </div> <br>
-            <div class=" col-md-3">
+            <!-- <div class=" col-md-3">
               <p class = "data"><% region.locations.each do |l|%>
                 <%=l.nearest_area%> </p> <% end %>
-            </div> <br>
+            </div> <br> -->
             <%= region.description %>
 
           </div>
