@@ -39,8 +39,12 @@ class LocationsController < ApplicationController
       location.region_id = 13
     elsif l == "toronto"
       location.region_id = 18
+    elsif l == "gatineau"
+      location.region_id = 22
     elsif l == "eastern canada"
       location.region_id = 24
+    elsif l == "northwest ontario"
+      location.region_id = 27
     end
 
     location.save
@@ -73,8 +77,12 @@ class LocationsController < ApplicationController
       location.region_id = 13
     elsif l == "toronto"
       location.region_id = 18
+    elsif l == "gatineau"
+      location.region_id = 22
     elsif l == "eastern canada"
       location.region_id = 24
+    elsif l == "northwest ontario"
+      location.region_id = 27
     end
 
     location.save
