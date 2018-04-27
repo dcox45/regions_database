@@ -118,31 +118,36 @@ h2 {
   padding-right: 40px;
   padding-top: 20px;
   padding-bottom: 20px; */
-  margin-left: 80px;
+  margin-left: 70px;
   margin-right: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
 
 }
 
-/* td {
-    padding-left: 40;
-    padding-right: 140px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: rgb(242, 113, 205);
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
+nav ul {
+  list-style-type: none;
+  border: 4px solid: #111111;
+  border-radius:10px;
 
 }
-tr {
-  border-color: rgb(76, 45, 17);
-  border-bottom: 4px solid;
-  background-color: rgb(129, 166, 226);
-} */
+
+nav ul li {
+  display: inline;
+  border-right: 2px solid rgb(255,255,255);
+  padding-right: 15px;
+  padding-left: 3px;
+}
+
+nav ul li a {
+  text-decoration: none;
+
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
 
 
 

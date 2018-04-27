@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function swapImage() {
+
+  var imageDisplayed = document.getElementById('display-image');
+
+  if (imageDisplayed.src.match("http://3.bp.blogspot.com/-z6xWC_kQBmQ/UZ0rv2jPPoI/AAAAAAAAAAA/lyiSNkQw9M4/s400/summernight8-backalleys-cho.jpg")) {
+    imageDisplayed.src = "https://nationalpostcom.files.wordpress.com/2012/05/cho.gif";
+  }
+  else {
+    imageDisplayed.src = "http://3.bp.blogspot.com/-z6xWC_kQBmQ/UZ0rv2jPPoI/AAAAAAAAAAA/lyiSNkQw9M4/s400/summernight8-backalleys-cho.jpg";
+  }
+}
