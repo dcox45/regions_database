@@ -154,7 +154,8 @@ nav ul li:last-child {
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 
 .date {
-  color:rgb(76, 29, 29);
+  color: rgb(17, 40, 2);
+  font-family: serif;
   font-weight: 700;
 }
 
