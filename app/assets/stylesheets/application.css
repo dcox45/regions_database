@@ -1,3 +1,7 @@
+
+
+
+
 h1 {
   color: rgb(17, 40, 2);
   font-size: 55px;
@@ -16,8 +20,8 @@ body{
   /* background-color:white;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
   min-width: 256px; */
+  /* background-color: rgb(10, 0, 2); */
 }
 
 
@@ -71,6 +75,11 @@ img.small {
   width: 200px;
 }
 
+img.large {
+  align-self: auto;
+  width: 650px;
+}
+
 /* //////////////////////////////////////////////////// */
 
 .nav-custom {
@@ -102,7 +111,7 @@ img.small {
 }
 
 .row-bottomborder{
-  border-bottom: 6px solid;
+  border-bottom: 3px solid;
   border-bottom-style: groove;
   border-color: rgb(17, 40, 2);
 }
@@ -144,7 +153,7 @@ nav ul {
 nav ul li {
   display: inline;
   border-right: 2px solid rgb(255,255,255);
-  padding-right: 15px;
+  padding-right: 27px;
   padding-left: 3px;
 }
 
@@ -212,8 +221,9 @@ nav ul li:last-child {
 
 
 .btn-add{
+  background-color: #055418;
   border-color: rgb(17, 40, 2);
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 
