@@ -174,7 +174,7 @@ nav ul li:last-child {
 }
 
 .data {                                    /*ALIGNS INFO ("LOCATIONS VISITED" FOR EXAMPLE) WITH DESCRIPTION OF REGION*/
-  border: 1px solid;
+  border: 2px solid;
   text-align: center;
   margin-left: -15px;
 }
@@ -185,13 +185,13 @@ nav ul li:last-child {
 
 .writings-fp{
   color: rgb(17, 40, 2);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .writings{
   color: rgb(17, 40, 2);
   text-align: left;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 2.0;
 }
 
