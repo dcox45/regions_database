@@ -15,8 +15,8 @@
       <label for="region_name" class = "form-labels form-cells">Region: </label>
       <select name ="region_name" class = "form-control form-cells" id = "region_name">
         <option selected><%= @region.name.to_s.titleize %></option>
-          <% @regions.drop(1).each do |r| %>
-            <option type = "text" id ="region_name" value="<%= r.name.to_s %>"><%= r.name.capitalize %> </option>
+          <% @regions.drop(0).each do |r| %>
+            <option type = "text" id ="region_name" value="<%= r.name.to_s %>"><%= r.name.titleize %> </option>
           <% end %>
       </select>
     </div>

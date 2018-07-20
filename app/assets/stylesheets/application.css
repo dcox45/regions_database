@@ -1,13 +1,13 @@
 
 h1 {
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   font-size: 55px;
   font-weight: 750;
   margin-bottom: -3px;
 }
 
 h2 {
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   font-size: 50px;
   font-weight: 650;
   text-align: center;
@@ -26,7 +26,7 @@ body{
 /*FOR HOME PAGE */
 
 .maintheme {
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   text-align: center;
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 .regions_b{
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   font-weight: 650;
   font-size: 17px;
 }
@@ -57,7 +57,7 @@ body{
 }
 
 .background_b {
-  background-color: rgb(17, 40, 2);
+  background-color:  rgb(1, 53, 9);
 }
 
 .region_name {
@@ -81,7 +81,7 @@ img.large {
 
 .nav-custom {
     font-weight: bold;
-    background-color: rgb(17, 40, 2);
+    background-color:  rgb(1, 53, 9);
     /* margin-top: -6px;
     margin-bottom: -6px; */
     margin-left: 163px;
@@ -110,14 +110,14 @@ img.large {
 .row-bottomborder{
   border-bottom: 3px solid;
   border-bottom-style: groove;
-  border-color: rgb(17, 40, 2);
+  border-color:  rgb(1, 53, 9);
 }
 
 .row-sideborders{
   border-left: 6px solid;
   border-left: 6px solid;
   border-style: groove;
-  border-color: rgb(17, 40, 2);
+  border-color:  rgb(1, 53, 9);
 }
 
 .regions-border{
@@ -168,7 +168,7 @@ nav ul li:last-child {
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 
 .date {
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   font-family: serif;
   font-weight: 700;
 }
@@ -184,12 +184,12 @@ nav ul li:last-child {
 }
 
 .writings-fp{
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   font-weight: 700;
 }
 
 .writings{
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   text-align: left;
   font-weight: 700;
   line-height: 2.0;
@@ -199,26 +199,26 @@ nav ul li:last-child {
 
 .form-custom{
   padding: 12px 18px;
-  border-color: rgb(17, 40, 2);
+  border-color:  rgb(1, 53, 9);
   border: 3px solid;
   margin-bottom: 80px;
 }
 
 .form-labels{
-  color: rgb(17, 40, 2);
+  color:  rgb(1, 53, 9);
   font-size: 20px;
   font-weight: 650;
 }
 
 .form-cells{
-  border-color: rgb(17, 40, 2);
+  border-color:  rgb(1, 53, 9);
   border-radius: 3px;
 }
 
 
 .btn-add{
-  background-color: #055418;
-  border-color: rgb(17, 40, 2);
+  background-color:  rgb(1, 53, 9);
+  border-color:  rgb(1, 53, 9);
   border-radius: 10px;
 }
 
