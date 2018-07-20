@@ -14,6 +14,7 @@ gem 'rails', '~> 5.0.4'
 
 group :development do
   gem 'sqlite3'
+  gem 'seed_dump'
 end
 
 group :production do
