@@ -4,7 +4,7 @@ class RegionsController < ApplicationController
 
   def home
     # @rs = Region.all
-    @regions = Region.all.order('begDate')  # RECENTLY ADDED ".ALL"
+    @regions = Region.all.order(:begDate)  # RECENTLY ADDED ".ALL"
     @years = ((Date.today - @regions.first.begDate) / 365).to_i    #"Date.today" replaced longer form (@region.last.endDate)
     @days = (Date.today - @regions.first.begDate).to_i
     render('!home.html.erb')
