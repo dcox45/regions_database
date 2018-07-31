@@ -16,7 +16,7 @@ class RegionsController < ApplicationController
     @regions = Region.all
     @region = Region.find_by(name: params['name'])
     @locations = @region.locations.order('date')
-    @first = @locations.first.date.strftime("%B #{@locations..day.ordinalize}, %Y")
+    @first = @locations.first.date.strftime("%B %d, %Y")
     render('show.html.erb')
   end
 

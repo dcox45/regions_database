@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
     <div align = "center">
-      <h2 align = "center">Are you SURE you want to delete <%= @location.caption %> from the database?</h2>
+      <h2 class = "center">Are you SURE you want to delete <%= @location.caption %> from the database?</h2>
       <br>
-        <br>
+       <br>
           <br>
-            <br>
+            <br>`
+      <a href="/<%=@region.name%>/destroy_location/<%= @location.id %>" align = "center" class = "btn btn-danger btn-lg ">DELETE</a><br><br><br>
+      <a href="/regions/<%=@region.name%>" class = "btn btn-primary btn-lg ">NO, GO BACK</a>
 
-      <a href="/<%=@region.name%>/destroy_location/<%= @location.id %>" align = "center" class = "btn btn-danger btn-lg btn-block">YES</a><br><br><br>
-      <a href="/regions/<%=@region.name%>" class = "btn btn-primary btn-lg btn-block">NO</a>
+
     </div>
   </div>
 
