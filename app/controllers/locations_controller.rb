@@ -10,6 +10,7 @@ class LocationsController < ApplicationController
     @region = Region.find_by(name: params['name'])
     @location = Location.find(params['id'])
 
+
   end
 
   def new
@@ -19,7 +20,6 @@ class LocationsController < ApplicationController
   end
 
   def create
-    # region = Region.find_by(name: params['name'])
     region = Region.find_by(name: params['name'])
     location = region.locations.new(
       caption: params['caption'],
@@ -44,29 +44,12 @@ class LocationsController < ApplicationController
   def update
     region = Region.find_by(name: params['name'])
 
-    location = Location.find(params['id'])
+    location = region.locations.find(params['id'])
     location.caption = params['caption']
     location.region_name = params['region_name']
     location.image_url = params['image_url']
     location.date = params['date']
     location.nearest_area = params['nearest_area']
-
-    l = location.region_name.downcase
-    if l == "chicagoland"
-      location.region_id = 3
-    elsif l == "roadtrip 2016"
-      location.region_id = 4
-    elsif l =="europe"
-      location.region_id = 13
-    elsif l == "toronto"
-      location.region_id = 18
-    elsif l == "gatineau"
-      location.region_id = 22
-    elsif l == "eastern canada"
-      location.region_id = 24
-    elsif l == "northwest ontario"
-      location.region_id = 27
-    end
 
     location.save
     redirect_to("/regions/#{region.name}/#{location.id}")

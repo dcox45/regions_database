@@ -73,19 +73,30 @@ img.small {
 }
 
 img.large {
-  align-self: auto;
-  width: 650px;
+  width: 550;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
 /* //////////////////////////////////////////////////// */
+
+
+
 
 .nav-custom {
     font-weight: bold;
     background-color:  rgb(1, 53, 9);
     /* margin-top: -6px;
     margin-bottom: -6px; */
-    margin-left: 163px;
-    margin-right: 163px;
+    margin-left: 11%;
+    margin-right: 11%;
     padding-top: 7px;
     padding-bottom: 7px;
 
@@ -94,6 +105,28 @@ img.large {
 .nav-color {
   margin-left: 20px;
   color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  border-radius:10px;
+
+}
+
+nav ul li {
+  display: inline;
+  border-right: 2px solid rgb(255,255,255);
+  padding-right: 27px;
+  padding-left: 3px;
+}
+
+nav ul li a {
+  text-decoration: none;
+
+}
+
+nav ul li:last-child {
+  border-right: none;
 }
 
 /* //////////////////////////////////////////////////////// */
@@ -140,31 +173,6 @@ img.large {
 
 }
 
-nav ul {
-  list-style-type: none;
-  border-radius:10px;
-
-}
-
-nav ul li {
-  display: inline;
-  border-right: 2px solid rgb(255,255,255);
-  padding-right: 27px;
-  padding-left: 3px;
-}
-
-nav ul li a {
-  text-decoration: none;
-
-}
-
-nav ul li:last-child {
-  border-right: none;
-}
-
-
-
-
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
 
 .date {
@@ -208,6 +216,7 @@ nav ul li:last-child {
   color:  rgb(1, 53, 9);
   font-size: 20px;
   font-weight: 650;
+
 }
 
 .form-cells{
@@ -220,6 +229,8 @@ nav ul li:last-child {
   background-color:  rgb(1, 53, 9);
   border-color:  rgb(1, 53, 9);
   border-radius: 10px;
+  font-size: 20px;
+  font-weight: 650;
 }
 
 
