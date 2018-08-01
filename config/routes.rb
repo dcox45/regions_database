@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root "regions#home"
+
+  #Users
+  get  '/signup',  to: 'users#new'
 
   #REGIONS
   get('/regions/:name', {:controller => 'regions', :action => 'show'})
