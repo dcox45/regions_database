@@ -21,20 +21,30 @@
           <div class="col item-wrapper custom-wrapper">
             <%if l %>
                 <a href="/regions/<%=@region.name%>/<%=l.id%>">
-                <h4 class="">   <%=l.caption.titleize %>       </h4>
-                <img src="<%=l.image_url%>" class="rounded" alt="..." width = 400 >
+                  <h4 class="">   <%=l.caption.titleize %>       </h4>
+                  <img src="<%=l.image_url%>" class="rounded" alt="..." width = 400 >
                 </a>
               <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p>
-              <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary">View Details</a>
-              <a href="/<%=@region.name%>/<%=l.id%>/edit" class = "btn btn-warning">Edit</a>
-              <a href="/<%=@region.name%>/destroy_warning/<%=l.id%>" class = "btn btn-danger">Destroy</a>
-            <%end%>
+
+              <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary btn-block margin-b">View Details</a>
+
+              <% if logged_in? %>
+                <div align="center">
+                  <a href="/<%=@region.name%>/<%=l.id%>/edit" class = "btn btn-warning">Edit</a>
+                  <a href="/<%=@region.name%>/destroy_warning/<%=l.id%>" class = "btn btn-danger">Destroy</a>
+                </div>
+              <% end %>
+
+            <% end %>
           </div>
         <%end%>
       </div>
     <%end%>
    <br> <br>
-<footer>  <a href="/<%= @region.name %>/new_location" class = "btn btn-success btn-lg btn-add ">+ Add a Location Visited in <%= @region.name.titleize %> </a>
+<footer>
+  <% if logged_in? %>
+    <a href="/<%= @region.name %>/new_location" class = "btn btn-success btn-lg btn-add ">+ Add a Location Visited in <%= @region.name.titleize %> </a>
+  <% end %>
 </footer>
 
 </div>

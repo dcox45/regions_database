@@ -36,9 +36,13 @@
         </ul>
 
         <ul class ="navbar-nav ml-auto">   <!--aligns to the right side of nav -->
-          <li class=nav-item>
-            <a class = "nav-color" href="/"><%= link_to "Admin Sign In", login_path, class: "btn btn-sm" %></a> &nbsp;&nbsp;
-          </li>
+            <% if logged_in? %>
+              <li>  <%= link_to "Admin Log out", logout_path, class: "btn btn-sm nav-color", method: :delete %> &nbsp;&nbsp; </li>
+            <% else %>
+              <li> <%= link_to "Admin Log in", login_path, class: "btn  nav-color" %> &nbsp;&nbsp; </li>
+            <% end%>
+
+
         </ul>
 
           <!-- <li class="nav-item dropdown">
