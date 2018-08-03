@@ -3,12 +3,10 @@
   <div class="row"> <br>
     <div class="col">
       <h1>REGIONS__DATABASE</h1>
+
       <p class="regions_b">A Project for Keeping Track of Where I've Been, and When<p>
     </div>
   </div> <br> <br>
-
-<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-
 
 
   <div class="row background_b ">
@@ -19,7 +17,7 @@
 
   <% @regions.each do |region| %>
     <div class="row row-bottomborder">
-      <div class="col-md-11 offset-md-1">
+      <div class="col-md-11 offset-md-1 margin-b">
         <div class="media">
           <div class="media-left media-top">
             <h3 class = "media-heading"><a href="regions/<%=region.name%>"> <%= region.name.titleize %> </h3>
@@ -28,9 +26,17 @@
               <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
             </a>
             <p class = "date" align = "center"><%= region.begDate %>  &nbsp; -  &nbsp;  <%= region.endDate %></p>
-            <a href="regions/<%=region.name%>" class = "btn btn-primary margin-b">View Locations Visited</a>  &nbsp;
-            <a href="/<%=region.name%>/edit" class = "btn btn-warning margin-b">Edit</a> &nbsp;
-            <a href="/destroy_warning/<%=region.name.downcase%>" class = "btn btn-danger margin-b">Destroy</a>
+            <a href="regions/<%=region.name%>" class = "btn btn-primary btn-block">View Locations Visited</a>  &nbsp;
+
+
+            <% if logged_in? %>
+              <div align="center">
+                <a href="/<%=region.name%>/edit" class = "btn btn-warning btn-sm">Edit</a> &nbsp;
+                <a href="/destroy_warning/<%=region.name.downcase%>" class = "btn btn-danger  btn-sm">Destroy</a>
+              </div>
+            <% end %>
+
+
           </div>
           <div align = "left" class="media-body margin-a writings-fp">
             <br>
@@ -50,8 +56,9 @@
     </div>
     <br>
   <% end %>
-
-  <a href="/new_region" class = "btn btn-success btn-lg btn-add">+ Add a Region</a> <br><br>
+  <% if logged_in? %>
+    <a href="/new_region" class = "btn btn-success btn-lg btn-add">+ Add a Region</a> <br><br>
+  <% end %>
   <p class = "writings" >This database will soon be accompanied by my writing, and be formed into something of a blog.  But for now, this will have to do.</p>
 </div>
 <br>

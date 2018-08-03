@@ -67,10 +67,10 @@ class RegionsController < ApplicationController
     render("about.html.erb")
   end
 
-  private
+  # private
 
-  def region_params
-    params.require(:region).permit(:image, :name, :image_url, :begDate, :endDate)
-  end
+  # def region_params
+  #   params.require(:region).permit(:image, :name, :image_url, :begDate, :endDate)
+  # end
 
 end
