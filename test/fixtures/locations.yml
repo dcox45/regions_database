@@ -5,11 +5,11 @@ one:
   region_id: MyString
   image_url: MyString
   date: 2018-01-26
-  nearest_area: MyString
+  city_or_CMA: MyString
 
 two:
   caption: MyString
   region_id: MyString
   image_url: MyString
   date: 2018-01-26
-  nearest_area: MyString
+  city_or_CMA: MyString

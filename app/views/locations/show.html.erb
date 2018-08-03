@@ -3,17 +3,13 @@
 <h2 class = ""><%= @location.caption.titleize %></h2>
 <br>
 <br>
-<div align="center">
-
-  <img class = "large center" src="<%=@location.image_url %>" alt="<%=@location.caption.titleize %>" >
-  <br>
-  <p align = "center" class = "mainthick"><b>Date Visited: </b>  <%= @location.date %></p>
-  <p align = "center"><b>Near: </b> <%= @location.nearest_area %></p>
-  <br>
-  <p align = "center">
-  <a href="/regions/<%=@region.name%>" class = "btn btn-primary btn-lg"> Back to <%=@region.name.titleize%></a>
-  </p>
-
-</div>
+<img class = "large center" src="<%=@location.image_url %>" alt="<%=@location.caption.titleize %>" >
+<br>
+<p align = "center" class = "mainthick"><b>Date Visited: </b>  <%= @location.date %></p>
+<p align = "center"><b>Near: </b> <%= @location.nearest_area %></p>
+<br>
+<p align = "center">
+<a href="/regions/<%=@region.name%>" class = "btn btn-primary btn-lg"> Back to <%=@region.name.titleize%></a>
+</p>
 <br>
 <br>
