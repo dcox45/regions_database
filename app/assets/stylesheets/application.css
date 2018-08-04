@@ -38,7 +38,7 @@ body{
 
 .regions{
   color: rgb(255,255,255);
-  font-size: 37px;
+  font-size: 33px;
   font-weight: 400;
   /* padding-left: 65px; */
   /* margin-left: 94px; */
@@ -89,7 +89,7 @@ img.large {
 
 
 .nav-custom {
-    font-weight: bold;
+    font-weight: 500;
     background-color:  rgb(1, 53, 9);
     /* margin-top: -6px;
     margin-bottom: -6px; */

@@ -37,9 +37,9 @@
 
         <ul class ="navbar-nav ml-auto">   <!--aligns to the right side of nav -->
             <% if logged_in? %>
-              <li>  <%= link_to "Admin Log out", logout_path, class: "btn btn-sm nav-color", method: :delete %> &nbsp;&nbsp; </li>
+              <li>  <%= link_to "Admin Logout", logout_path, class: "btn btn-sm nav-color", method: :delete %> &nbsp;&nbsp; </li>
             <% else %>
-              <li> <%= link_to "Admin Log in", login_path, class: "btn  nav-color" %> &nbsp;&nbsp; </li>
+              <li> <%= link_to "Admin Login", login_path, class: "btn btn-sm nav-color" %> &nbsp;&nbsp; </li>
             <% end%>
 
 
