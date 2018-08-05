@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   #REGIONS
   get('/regions/:name', {:controller => 'regions', :action => 'show'})
   get('/new_region', {:controller => 'regions', :action => 'new'})
+  get  '/create_region', to: 'regions#create'
   get('/create_region', {:controller => 'regions', :action => 'create'})
   get('/:name/edit', {:controller => 'regions', :action => 'edit'})
   get('/update_region/:name', {:controller => 'regions', :action => 'update'})
