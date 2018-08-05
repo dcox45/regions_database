@@ -85,26 +85,6 @@ img.large {
 
 /* //////////////////////////////////////////////////// */
 
-
-
-
-.nav-custom {
-    font-weight: 500;
-    background-color:  rgb(1, 53, 9);
-    margin-top: -6px;
-    margin-bottom: -6px;
-    margin-left: 6.8%;
-    margin-right: 6.8%;
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-}
-
-.nav-color {
-  margin-left: 20px;
-  color: white;
-}
-
 nav ul {
   list-style-type: none;
   border-radius:10px;
@@ -125,6 +105,23 @@ nav ul li a {
 
 nav ul li:last-child {
   border-right: none;
+}
+
+.nav-custom {
+    font-weight: 450;
+    background-color:  rgb(1, 53, 9);
+    margin-top: -6px;
+    margin-bottom: -6px;
+    margin-left: 6.8%;
+    margin-right: 6.8%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+}
+
+.nav-color {
+  margin-left: 20px;
+  color: white;
 }
 
 /* //////////////////////////////////////////////////////// */
@@ -189,7 +186,7 @@ nav ul li:last-child {
 
 .writings-fp{
   color:  rgb(1, 53, 9);
-  font-weight: 700;
+  font-weight: 450;
 }
 
 .writings{
