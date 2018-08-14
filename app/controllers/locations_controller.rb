@@ -65,7 +65,7 @@ class LocationsController < ApplicationController
     @region = Region.find_by(name: params['name'])
     location = Location.find(params['id'])
     location.destroy
-    Rails.logger.warn(location.caption + " LOCATION DESTROYED")
+    Rails.logger.warn(" LOCATION DESTROYED: " + location.caption)
     redirect_to("/regions/#{@region.name}")
   end
 
