@@ -14,56 +14,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body class = "">
-    <nav class="navbar navbar-expand-lg ">
+  <body class="container">
+    <nav class="navbar navbar-expand-lg nav-custom">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-      <div  class="collapse navbar-collapse nav-custom " id="navbarSupportedContent">  <!--THIS IS WHAT CHANGES THE NAVBAR COLOUR -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-color " href="/"> HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">+ Add Region<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-color" href="/new_region"> + Add Region </a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">+ Add Location</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-color" href=""> + Add Location </a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">All Location</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-color" href="/all_locations"> All Locations </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-color" href="/about"> About </a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About</a>
           </li>
         </ul>
-
-        <ul class ="navbar-nav ml-auto">   <!--aligns to the right side of nav -->
-            <% if logged_in? %>
-              <li>  <%= link_to "Admin Logout", logout_path, class: "btn btn-sm nav-color", method: :delete %> &nbsp;&nbsp; </li>
-            <% else %>
-              <li> <%= link_to "Admin Login", login_path, class: "btn btn-sm nav-color" %> &nbsp;&nbsp; </li>
-            <% end%>
-
-
+        <ul class="navbar-nav navbar-right">
+          <% if logged_in? %>
+            <li class="nav-item active"><%= link_to "Admin Logout", logout_path, class: "nav-link", method: :delete %></li>
+          <% else %>
+            <li class="nav-item active"><%= link_to "Admin Login", login_path, class: "nav-link" %></li>
+          <% end %>
         </ul>
-
-          <!-- <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-color"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> -->
-
-        <!-- <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2 background_a" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
       </div>
     </nav>
+
 
     <%= yield %>
 
