@@ -58,6 +58,7 @@ body{
 
 .background_b {
   background-color:  rgb(1, 53, 9);
+  height:45px;
 }
 
 .region_name {
@@ -114,16 +115,15 @@ img.large {
 
 nav ul {
   list-style-type: none;
+  border-radius:10px;
 }
 
 nav ul li {
-  background-color: rgb(255,0,0);
-  display: inline;
   border-right: 2px solid rgb(255,255,255);
   padding-right: 15px;
   padding-left: 15px;
-
 }
+
 
 nav ul li:last-child {
   border-right: none;
