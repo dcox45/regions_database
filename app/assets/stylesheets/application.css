@@ -121,7 +121,7 @@ nav ul {
 }
 
 nav ul li {
-  border-right: 2px solid rgb(255,255,255);
+  /* border-right: 2px solid rgb(255,255,255); */
   padding-right: 15px;
   padding-left: 15px;
 }
