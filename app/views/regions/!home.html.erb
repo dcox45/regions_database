@@ -19,11 +19,11 @@
       <div class="col-md-11 offset-md-1 margin-b">
         <div class="media">
           <div class="media-left media-top">
-            <h3 class = "media-heading"><a href="regions/<%=region.name%>"> <%= region.name.titleize %> </h3>
+            <a href="regions/<%=region.name%>"><h3 class = "media-heading"> <%= region.name.titleize %> </h3> <a>
 
               <!-- <%= link_to image_tag(region.image.url, class: 'media-object'), region.image.url, target: '_blank' %> -->
               <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
-            </a>
+            
             <p class = "date" align = "center"><%= region.begDate %>  &nbsp; -  &nbsp;  <%= region.endDate %></p>
             <a href="regions/<%=region.name%>" class = "btn btn-primary btn-block">View Locations Visited</a>  &nbsp;
 

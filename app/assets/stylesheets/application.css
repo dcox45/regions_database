@@ -99,7 +99,7 @@ img.large {
     background-color:  rgb(1, 53, 9);
     height: 45px;
     margin-top: 7px;
-    font-weight: 600;
+    font-weight: 650;
 }
 
 .navbar-brand {
@@ -126,10 +126,11 @@ nav ul li {
   padding-left: 15px;
 }
 
-
 nav ul li:last-child {
   border-right: none;
 }
+
+
 
 .admin {
   font-weight: 400;
@@ -162,10 +163,7 @@ nav ul li:last-child {
 .regions-border{
   border-left: 4px solid;
   border-right: 4px solid;
-
 }
-
-
 
 .custom-wrapper {
   /* padding-left: 40px;
@@ -176,7 +174,6 @@ nav ul li:last-child {
   margin-right: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
-
 }
 
 /*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
