@@ -57,6 +57,7 @@ body{
 }
 
 .background_b {
+  border-radius: 3px;
   background-color:  rgb(1, 53, 9);
   height:45px;
 }
@@ -96,10 +97,11 @@ img.large {
 
 
 .nav-custom {
-    background-color:  rgb(1, 53, 9);
-    height: 45px;
-    margin-top: 7px;
-    font-weight: 650;
+  border-radius: 3px;
+  background-color:  rgb(1, 53, 9);
+  height: 45px;
+  margin-top: 7px;
+  font-weight: 650;
 }
 
 .navbar-brand {
@@ -236,6 +238,11 @@ nav ul li:last-child {
   font-weight: 650;
 }
 
+.btn-view{
+  background-color:  rgb(1, 53, 9);
+  border-color:  rgb(1, 53, 9);
+  border-radius: 10px;
+}
 
 
 

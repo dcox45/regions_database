@@ -26,7 +26,7 @@
                 </a>
               <p><b>Date Visited:</b>   <%= l.date %> &nbsp; | &nbsp; <b>Near:</b> <%= l.nearest_area %></p>
 
-              <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-primary btn-block margin-b">View Details</a>
+              <a href="/regions/<%=@region.name%>/<%=l.id%>" class = "btn btn-success btn-block btn-view margin-b">View Details</a>
 
               <% if logged_in? %>
                 <div align="center">

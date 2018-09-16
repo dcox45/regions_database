@@ -23,9 +23,9 @@
 
               <!-- <%= link_to image_tag(region.image.url, class: 'media-object'), region.image.url, target: '_blank' %> -->
               <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
-            
+
             <p class = "date" align = "center"><%= region.begDate %>  &nbsp; -  &nbsp;  <%= region.endDate %></p>
-            <a href="regions/<%=region.name%>" class = "btn btn-primary btn-block">View Locations Visited</a>  &nbsp;
+            <a href="regions/<%=region.name%>" class = "btn btn-success btn-block btn-view">View Locations Visited</a>  &nbsp;
 
 
             <% if logged_in? %>
