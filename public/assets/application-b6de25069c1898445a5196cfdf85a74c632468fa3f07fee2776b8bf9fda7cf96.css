@@ -1,0 +1,264 @@
+
+h1 {
+  color:  rgb(1, 53, 9);
+  font-size: 50px;
+  font-weight: 750;
+  margin-bottom: -3px;
+}
+
+h2 {
+  color:  rgb(1, 53, 9);
+  font-size: 55px;
+  font-weight: 650;
+  text-align: center;
+}
+
+body{
+  /* background-color:white;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 256px; */
+  /* background-color: rgb(10, 0, 2); */
+}
+
+
+
+/*FOR HOME PAGE */
+
+.maintheme {
+  color:  rgb(1, 53, 9);
+  text-align: center;
+}
+
+.industrial {
+  color: rgb(76, 45, 17);
+  text-align: center;
+  font-size: 60px;
+}
+
+.regions{
+  color: rgb(255,255,255);
+  font-size: 30px;
+  font-weight: 400;
+  /* padding-left: 65px; */
+  /* margin-left: 94px; */
+  /* text-align: center; */
+}
+
+.regions_b{
+  color:  rgb(1, 53, 9);
+  font-weight: 650;
+  font-size: 17px;
+}
+
+.background_a{
+  background-color:rgb(36, 114, 18);
+
+}
+
+.background_b {
+  border-radius: 3px;
+  background-color:  rgb(1, 53, 9);
+  height:45px;
+}
+
+.region_name {
+
+}
+
+/* --------- PHOTOS --------- */
+img.small {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+img.large {
+  width: 550;
+}
+
+.center {
+    margin: auto;
+    padding: 10px;
+
+
+}
+
+/* a */
+
+/* //////////////////////////////////////////////////// */
+
+/* nav ul {
+  list-style-type: none;
+  border-radius:10px;
+
+} */
+
+
+.nav-custom {
+  border-radius: 3px;
+  background-color:  rgb(1, 53, 9);
+  height: 45px;
+  margin-top: 7px;
+  font-weight: 650;
+}
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+.nav-item a {
+  color: #ffffff;
+}
+
+.nav-item a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+nav ul {
+  margin-left: -22px;
+}
+nav ul li:first-child {
+
+}
+
+nav ul li {
+  /* border-right: 2px solid rgb(255,255,255); */
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+
+
+.admin {
+  font-weight: 400;
+}
+
+/* //////////////////////////////////////////////////////// */
+
+.margin-a {
+  margin-right: 60px;
+  margin-left: 120px;
+  margin-top: 85px;
+}
+.margin-b{
+  margin-bottom: 20px;
+}
+
+.row-bottomborder{
+  border-bottom: 3px solid;
+  border-bottom-style: groove;
+  border-color:  rgb(1, 53, 9);
+}
+
+.row-sideborders{
+  border-left: 6px solid;
+  border-left: 6px solid;
+  border-style: groove;
+  border-color:  rgb(1, 53, 9);
+}
+
+.regions-border{
+  border-left: 4px solid;
+  border-right: 4px solid;
+}
+
+.custom-wrapper {
+  /* padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px; */
+  margin-left: 70px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*FOR WRITING (DATES, CAPTIONS, DESCRIPTIONS)*/
+
+.date {
+  font-weight: 700;
+}
+
+.data {                                    /*ALIGNS INFO ("LOCATIONS VISITED" FOR EXAMPLE) WITH DESCRIPTION OF REGION*/
+  border: 2px solid;
+  text-align: center;
+  margin-left: -15px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.writings-fp{
+  color:  rgb(1, 53, 9);
+  font-weight: 700;
+}
+
+.writings{
+  color:  rgb(1, 53, 9);
+  text-align: left;
+  font-weight: 700;
+  line-height: 2.0;
+}
+
+/* //////////////FORMS///////////////////// */
+
+.form-custom{
+  padding: 12px 18px;
+  border-color:  rgb(1, 53, 9);
+  border: 3px solid;
+  margin-bottom: 80px;
+}
+
+.form-labels{
+  color:  rgb(1, 53, 9);
+  font-size: 20px;
+  font-weight: 650;
+
+}
+
+.form-cells{
+  border-color:  rgb(1, 53, 9);
+  border-radius: 3px;
+}
+
+
+.btn-add{
+  background-color:  rgb(1, 53, 9);
+  border-color:  rgb(1, 53, 9);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.btn-view{
+  background-color:  rgb(1, 53, 9);
+  border-color:  rgb(1, 53, 9);
+  border-radius: 10px;
+}
+
+
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
