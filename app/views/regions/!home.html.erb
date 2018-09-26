@@ -20,9 +20,13 @@
         <div class="media">
           <div class="media-left media-top">
             <a href="regions/<%=region.name%>"><h3 class = "media-heading"> <%= region.name.titleize %> </h3> <a>
+              <div class="row">
+                <%= link_to image_tag(region.image.url, class: 'media-object'), region.image.url, target: '_blank' %>
 
-              <!-- <%= link_to image_tag(region.image.url, class: 'media-object'), region.image.url, target: '_blank' %> -->
-              <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
+              </div>
+              <% if region.image_url %>
+                <img src="<%=region.image_url %>" alt="<%= region.name %>" width = 350 >
+              <% end %>
 
             <p class = "date" align = "center"><%= region.begDate %>  &nbsp; -  &nbsp;  <%= region.endDate %></p>
             <a href="regions/<%=region.name%>" class = "btn btn-success btn-block btn-view">View Locations Visited</a>  &nbsp;

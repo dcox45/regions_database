@@ -21,19 +21,19 @@ class RegionsController < ApplicationController
   end
 
   def new
+    @region = Region.new
     render('new.html.erb')
   end
 
   def create
-    region = Region.new
-    region.name = params['name'].downcase
-    region.image_url = params['image_url']
-    region.begDate = params['begDate']
-    region.endDate = params['endDate']
-    region.description = params['description']
-    region.save
-    region.save
-    redirect_to("/")
+    region = Region.new(region_params)
+    if @photo.save
+      flash[:notice] = "Successfully added new photo!"
+      redirect_to root_path
+    else
+      flash[:alert] = "Error adding new photo!"
+      render :new
+    end
   end
 
   def edit
@@ -67,10 +67,10 @@ class RegionsController < ApplicationController
     render("about.html.erb")
   end
 
-  # private
+  private
 
-  # def region_params
-  #   params.require(:region).permit(:image, :name, :image_url, :begDate, :endDate)
-  # end
+  def region_params
+    params.require(:region).permit(:image, :name, :image_url, :begDate, :endDate, :description)
+  end
 
 end
